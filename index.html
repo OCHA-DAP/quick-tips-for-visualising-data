@@ -46,34 +46,19 @@
                     <div class="header_bar centregreen">
                         <div class="header_title">Contents</div>
                     </div>
-                    <p class="text-small-centre">Click below to jump to a section</p>
+                    <p class="text-small-centre">In this short lesson we will go through best practices for creating visualising using COVID-19 data and how to create a few simple charts in Excel.</p>
                     <p class="text-small-centre">
                         <a class="contents_link" href="#/Why_We_Visualise">Why We Visualise</a>
                     </p>
                     <p class="text-small-centre">
-                        <a class="contents_link" href="#/howto">How to use</a>
+                        <a class="contents_link" href="#/designing_responsibly">Designing Responsibly</a>
                     </p>                                        
                     <p class="text-small-centre">
-                        <a class="contents_link" href="#/the_basics">The Basics</a>
+                        <a class="contents_link" href="#/chart_choices">Choosing the Right Chart</a>
                     </p>
                     <p class="text-small-centre">
-                        <a class="contents_link" href="#/collecting">Collecting</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/spreadsheets">Spreadsheets</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/data_managing">Data Managing</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/visualising">Visualising</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/sharing">Sharing</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/softskills">Soft Skills</a>
-                    </p>                                                                                     
+                        <a class="contents_link" href="#/do_it_yourself">Make Your Own Chart</a>
+                    </p>                                                              
                 </section>
 				<section id="intro">
                     <div class="header_bar centregreen">
@@ -122,7 +107,114 @@
 					<p class="text-small"> We visualise data to explain a phenomenon we are seeing in the data. Explanatory data visualisation can be used to inform, persuade and engage an audience but critically, this type of visualisation requires a well defined audience and a clear objective. This is the type of visualisation we are going to be focussed on here.
 					</p>
 				</section> 
-			<!-- SECTION 2 Charts -->
+				<!-- SECTION 2 Context -->
+			<section id="undertstand_context" data-background="#f2645a">
+				<div class="title_container">
+					<h1 class="white">Understand the Data</h1>
+				</div>
+			</section>
+			<section id="responsible_vi">
+				<div class="header_bar centrered">
+					<div class="header_title">03</div>
+				</div>
+				<h4>Epistomological Corner</h4>
+				<p class="text-small">Before digging into COVID-19 data visualisation, it is important to spend a bit of time understanding what can – and what cannot - be said based on this data. It is best practice to understand what data is contained in a dataset, what that data represents, and in this case a few basic concepts around epistemological data. 
+				</p>
+			</section>
+				<!-- SECTION 3 Best Practice -->
+			<section id="designing_responsibly" data-background="#1bb580ff">
+				<div class="title_container">
+					<h1 class="white">Design Reponsibly in a Crisis</h1>
+				</div>
+			</section>
+			<section id="responsible_vi">
+				<div class="header_bar centregreen">
+					<div class="header_title">03</div>
+				</div>
+				<h4>Designing Responsbily</h4>
+				<p class="text-small">The way that we communicate about this epidemic has the potential to shape their view of risk and safety. 
+				</p>
+				<p class="text-small">The design choices we make will influence how our audience interprets our underlying data. There are no hard and fast rules for making responsible design choices. The following are a few things to consider when creating COVID-19 data visualisation. 
+				</p>
+			</section>
+			<section id="responsible_message">
+				<div class="header_bar centregreen">
+					<div class="header_title">04</div>
+				</div>
+				<h4>Ask yourself  two questions </h4>
+				<p class="text-small"> 
+					<ol start="number">
+						<li>What am I trying to say?</li>
+						<li>Who am I trying to say it to?</li>
+					  </ol>
+				</p>
+			</section>
+			<section id="responsible_best_one">
+				<div class="header_bar centregreen">
+					<div class="header_title">06</div>
+				</div>
+				<h4>Choose Colours Carefully</h4>
+				<p class="text-small">We associate red with danger. A map full of a overlapping red circles, or ever scarier shades of red, will communicate the danger but may distract from from other messages. Consider choosing more neutral colours when creating COVID-19 visualisations.
+				</p>
+				<div>
+					<img src="pics/who_map.png" alt="colour map" height="300" />
+					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Orgasnisation Dashboard</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_two">
+				<div class="header_bar centregreen">
+					<div class="header_title">07</div>
+				</div>
+				<h4>Be Careful with Absolute Numbers</h4>
+				<p class="text-small"> When comparing across counrties, explore the differences in the visualisation using absolute (total # confirmed cases) and relative (# of confirmed cases per x thousand people). In the map on the left, we are looking at the total number of cases whereas the map on the right shows the number of cases per 100,000.
+				</p>
+				<div>
+					<img src="pics/relative_abolute.png" alt="realtive abolute" height="300" />
+					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Kenneth Field</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_three">
+				<div class="header_bar centregreen">
+					<div class="header_title">08</div>
+				</div>
+				<h4>Pay Attention when cropping your axis </h4>
+				<p class="text-small"> Cropping an axis can remove important context from the visual. In the case below (left), the cropped axis may unintentionally make the fatality rate seems worse than it is by obscuring the visual power of the percentage of people who survive. 
+				</p>
+				<div>
+					<img src="pics/axis_chart.png" alt="axi chart" height="300" />
+					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Andy Cotgreave</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_four">
+				<div class="header_bar centregreen">
+					<div class="header_title">09</div>
+				</div>
+				<h4>Consider Using a Logarithmic Scale</h4>
+				<p class="text-small">When visualising a variable growing exponential, a linear scale can obscure important details. For example, the US and Italy look like they are on similar trajectories on the linear scale whereas it is clear with the logarithmic scale that COVID-19 cases are growing faster in the US.
+				</p>
+				<div>
+					<img src="pics/linear_log.png" alt="log" height="300" />
+					<p class="image-text"> Source <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_five">
+				<div class="header_bar centregreen">
+					<div class="header_title">10</div>
+				</div>
+				<h4>Embrace Complexity</h4>
+				<p class="text-small">There is a great deal of uncertainty around COVID-19 generally - this uncertainty does not go away in the data. Try to find ways to convey that uncertainty through your visualisation. For example, adding the simple phrase ‘we know of x cases’ helps to convey the critical message that the data we have is incomplete. 
+				</p>
+				<div>
+					<img src="pics/weknowof_map.png" alt="weknowof" height="300" />
+					<p class="image-text"> Source <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+					</p>
+				</div>
+			</section>
+			<!-- SECTION 4 Charts -->
 			<section id="chart_choices" data-background="#f2645a">
                 <div class="title_container">
                     <h1 class="white">Choosing the Right Chart</h1>
@@ -130,7 +222,7 @@
             </section>
             <section id="relationship_types">
             	<div class="header_bar centrered">
-                    <div class="header_title">03</div>
+                    <div class="header_title">11</div>
                 </div>
                 <h4>Relationship Types</h4>
                 <p class="text-small">Now that we know a little about the context of the data, we need to determine what we want to communicate. The way that we visualise information should follow from the type of relationships between different variables that we want to highlight. 
@@ -139,7 +231,7 @@
 			<section>
 				<section id="Change over time">
                		 <div class="header_bar centrered">
-                    	<div class="header_title">04</div>
+                    	<div class="header_title">12</div>
 					</div>
 					<h4>Change Over Time</h4>
 					<p class="text-small"> The following charts help us to give emphasis to changing trends. 
@@ -153,7 +245,7 @@
 				</section>
 				<section id="change_line">
 					<div class="header_bar centrered">
-						<div class="header_title">04</div>
+						<div class="header_title">12</div>
 					</div>
 					<h4>Line Graph</h4>
 					<p class="text-small"> BLAH BALH
@@ -165,7 +257,7 @@
 				</section>
 				<section id="change_bar">
 					<div class="header_bar centrered">
-						<div class="header_title">04</div>
+						<div class="header_title">12</div>
 					</div>
 					<h4>Bar Graph</h4>
 					<p class="text-small"> BLAH BALH
@@ -179,7 +271,7 @@
 			<section>
 				<section id="magnitude">
                		 <div class="header_bar centrered">
-                    	<div class="header_title">05</div>
+                    	<div class="header_title">13</div>
 					</div>
 					<h4>Magnitude</h4>
 					<p class="text-small"> The following charts show size comparisons. These can be relative or absolute (need to see fine differences). Usually these show a 'counted' number rather than a calculated rate or percent
@@ -193,7 +285,7 @@
 				</section>
 				<section id="bar_chart">
 					<div class="header_bar centrered">
-						<div class="header_title">05</div>
+						<div class="header_title">13</div>
 					</div>
 					<h4>Bar Graph</h4>
 					<p class="text-small"> BLAH BALH
@@ -207,7 +299,7 @@
 			<section>
 				<section id="ranking">
                		 <div class="header_bar centrered">
-                    	<div class="header_title">06</div>
+                    	<div class="header_title">14</div>
 					</div>
 					<h4>Ranking</h4>
 					<p class="text-small"> Use where an item's position in an ordered list is more important than its absolute or relative value. Don't be afraid to highlight the points of interest.  
@@ -221,7 +313,7 @@
 				</section>
 				<section id="bar_chart">
 					<div class="header_bar centrered">
-						<div class="header_title">06</div>
+						<div class="header_title">14</div>
 					</div>
 					<h4>Bar & Column Chart</h4>
 					<p class="text-small"> BLAH BALH
@@ -235,7 +327,7 @@
 			<section>
 				<section id="distribution">
                		 <div class="header_bar centrered">
-                    	<div class="header_title">07</div>
+                    	<div class="header_title">15</div>
 					</div>
 					<h4>Distribution</h4>
 					<p class="text-small"> Show the values in the dataset and how often they occur. The shape (or the skew) of a distribution can be a memorable way of highlighting the lack of uniformity of equality in the data. For example, case mortality rate. 
@@ -249,7 +341,7 @@
 				</section>
 				<section id="histogram">
 					<div class="header_bar centrered">
-						<div class="header_title">07</div>
+						<div class="header_title">15</div>
 					</div>
 					<h4>Histogram</h4>
 					<p class="text-small"> BLAH BALH
@@ -263,7 +355,7 @@
 			<section>
 				<section id="part_whole">
                		 <div class="header_bar centrered">
-                    	<div class="header_title">08</div>
+                    	<div class="header_title">16</div>
 					</div>
 					<h4>Part of a Whole</h4>
 					<p class="text-small"> Show how a single entity can be broken down into its component elements. If the reader is primarily interested in the size of the components, considera magnitude-type chart instead. 
@@ -277,7 +369,7 @@
 				</section>
 				<section id="pie_chart">
 					<div class="header_bar centrered">
-						<div class="header_title">08</div>
+						<div class="header_title">16</div>
 					</div>
 					<h4>Pie Chart</h4>
 					<p class="text-small"> BLAH BALH
@@ -289,7 +381,7 @@
 				</section>
 				<section id="stacked_bar">
 					<div class="header_bar centrered">
-						<div class="header_title">08</div>
+						<div class="header_title">16</div>
 					</div>
 					<h4>Stacked Bar</h4>
 					<p class="text-small"> BLAH BALH
@@ -300,80 +392,9 @@
                     </div>
 				</section>
 			</section>
-			<!-- SECTION 3 Best Practice -->
-			<section id="designing_responsibly" data-background="#1bb580ff">
-				<div class="title_container">
-					<h1 class="white">Design Reponsible Data Visualisations in a Crisis</h1>
-				</div>
-			</section>
-			<section id="responsible_best_one">
-				<div class="header_bar centregreen">
-					<div class="header_title">09</div>
-				</div>
-				<h4>Choose Colours Carefully</h4>
-				<p class="text-small">We associate red with danger. The effect of a map full of red bubbles or different (scarier) shades of red is panic. Consider choosing more neutral colours (ie blue) and avoid using these ‘danger’ colours when creating COVID 19 visuals.
-				</p>
-				<div>
-					<img src="pics/who_map.png" alt="colour map" height="300" />
-					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Orgasnisation Dashboard</a> 
-					</p>
-				</div>
-			</section>
-			<section id="responsible_best_two">
-				<div class="header_bar centregreen">
-					<div class="header_title">10</div>
-				</div>
-				<h4>Be Careful with Absolute Numbers</h4>
-				<p class="text-small"> When comparing across counrties or time, relative numbers may provide a more accurate picture. In the map on the left, we are looking at the total number of cases whereas the map on the right shows the number of cases per 100,000.
-				</p>
-				<div>
-					<img src="pics/relative_abolute.png" alt="realtive abolute" height="300" />
-					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Kenneth Field</a> 
-					</p>
-				</div>
-			</section>
-			<section id="responsible_best_three">
-				<div class="header_bar centregreen">
-					<div class="header_title">11</div>
-				</div>
-				<h4>Pay Attention to Your X & Y Axises</h4>
-				<p class="text-small"> Cropping the axis can remove important context from the visual. In the caes below, the cropped axis makes the fatality rate seems worse than it is by removing the context that the vast majority of people survive. 
-				</p>
-				<div>
-					<img src="pics/axis_chart.png" alt="axi chart" height="300" />
-					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Andy Cotgreave</a> 
-					</p>
-				</div>
-			</section>
-			<section id="responsible_best_four">
-				<div class="header_bar centregreen">
-					<div class="header_title">12</div>
-				</div>
-				<h4>Consider Using a Logarithmic Scale</h4>
-				<p class="text-small">When visualising a variable growing exponential, a linear scale can obscure important details. For example, the US and Italy look like they are on similar trajectories on the linear scale whereas it is clear with the logarithmic scale that COVID-19 cases are growing faster in the US.
-				</p>
-				<div>
-					<img src="pics/linear_log.png" alt="log" height="300" />
-					<p class="image-text"> Source <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a> 
-					</p>
-				</div>
-			</section>
-			<section id="responsible_best_five">
-				<div class="header_bar centregreen">
-					<div class="header_title">13</div>
-				</div>
-				<h4>Embrace Complexity</h4>
-				<p class="text-small">There is a great deal of uncertainty around COVID-19. Try to find ways to convey that uncertainty in the data. For example, adding the simple phrase ‘we know of x cases’ helps to convey the message that the data we have is incomplete. 
-				</p>
-				<div>
-					<img src="pics/weknowof_map.png" alt="weknowof" height="300" />
-					<p class="image-text"> Source <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
-					</p>
-				</div>
-			</section>
 			</div>
 		</div>
-
+		
 		<script src="js/reveal.js"></script>
 
 		<script>
