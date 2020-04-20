@@ -184,7 +184,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #2a76dd;
+  color: #0853bb;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -299,7 +299,7 @@ body {
     margin-left:10% !important;
 }
 .text-ex-small {
-  font-size:.9em !important;
+  font-size:0.5em !important;
   color:#595959 !important;
   text-align: justify;
   text-justify: inter-word;
@@ -395,6 +395,10 @@ body {
 
 img {
   border-width:0px!important;
+}
+
+.reveal table.kat_table {
+  font-size:5px;
 }
 
 /*.reveal .slides .present {
