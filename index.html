@@ -1,0 +1,395 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/white_custom.css" id="theme">
+
+		<!-- Centre Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="frontcover" data-background="#1bb580">
+                    <div class="title_container">
+                        <h1 class="white">Visualise COVID-19</h1>
+                        <h3 class="white">Tips Visulising Data in a Humanitarian Response</h3>
+                        <p class="text-small-centre white">
+                            Created by <a href="https://centre.humdata.org/" target="_blank">Centre for Humanitarian Data</a> / <a href="http://twitter.com/humdata" target="_blank">@humdata</a>
+                        </p>
+                        <p class="text-small-centre white">
+                            Press right on your keyboard or swipe 
+                            right to navigate
+                        </p>
+                    </div>
+				</section>
+				<section id="contents">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Contents</div>
+                    </div>
+                    <p class="text-small-centre">Click below to jump to a section</p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/Why_We_Visualise">Why We Visualise</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/howto">How to use</a>
+                    </p>                                        
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/the_basics">The Basics</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/collecting">Collecting</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/spreadsheets">Spreadsheets</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/data_managing">Data Managing</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/visualising">Visualising</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/sharing">Sharing</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/softskills">Soft Skills</a>
+                    </p>                                                                                     
+                </section>
+				<section id="intro">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Introduction</div>
+                    </div>
+					<p class="text-small">The choices we make when we visualise data influence how people see, understand, and react to the data. </p>
+					<p class="text-small"> Click through to learn best practices for making responsible data visualisations with COVID-19 Data.</p>
+					<p class="text-small"> How much time do you have to learn? </p>
+					<p class="text-small">
+						<ul>
+							<li class="text-small">Five Minutes: Click Through!</li>
+							<li class="text-small">Fifteen Minutes: Click through & watch demo for making graphs in Excel </li>
+							<li class="text-small">Click through, watch demo for making graphs in Excel & give it a go yourself with our COVID-19 data lab</li>
+						  </ul>
+                    </p>
+				</section>
+				<!-- SECTION 1 WHY -->
+				<section id="Why_We_Visualise" data-background="#007ce0">
+                    <div class="title_container">
+                        <h1 class="white">Why Do We Visualise Data?</h1>
+                    </div>
+                </section>
+                <section>
+                    <section id="to_explore">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">01</div>
+                        </div>
+                        <h4>We Visualise to Explore</h4>
+                        <p class="text-small">We visualise data to explore the data, uncover different relationships and determine the most meaningful information to highlight or analyse further. The audience for this type of visualisation is often the analyst. This type of visualisation allows the analyst to spot trends or outliers and develop questions for further exploration. This is an age old tradition -  learn about how exploratory data visualisation changed how we understood the spread of cholera way back in 1874. 
+                        </p>
+                        <p class="text-bottom"> Press down to to learn more</p> 
+					</section> 
+					<section id="to_explore_more">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">01</div>
+                        </div>
+                        <p class="text-small"> Jon Snow
+						</p>
+					</section> 
+				</section> 
+				<section id="to_explain">
+					<div class="header_bar centreblue">
+						<div class="header_title">02</div>
+					</div>
+					<h4>We Visualise To Explain</h4>
+					<p class="text-small"> We visualise data to explain a phenomenon we are seeing in the data. Explanatory data visualisation can be used to inform, persuade and engage an audience but critically, this type of visualisation requires a well defined audience and a clear objective. This is the type of visualisation we are going to be focussed on here.
+					</p>
+				</section> 
+			<!-- SECTION 2 Charts -->
+			<section id="chart_choices" data-background="#f2645a">
+                <div class="title_container">
+                    <h1 class="white">Choosing the Right Chart</h1>
+                </div>
+            </section>
+            <section id="relationship_types">
+            	<div class="header_bar centrered">
+                    <div class="header_title">03</div>
+                </div>
+                <h4>Relationship Types</h4>
+                <p class="text-small">Now that we know a little about the context of the data, we need to determine what we want to communicate. The way that we visualise information should follow from the type of relationships between different variables that we want to highlight. 
+				</p>
+			</section>
+			<section>
+				<section id="Change over time">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">04</div>
+					</div>
+					<h4>Change Over Time</h4>
+					<p class="text-small"> The following charts help us to give emphasis to changing trends. 
+					</p>
+					<div>
+                        <img src="pics/chang_time.png" alt="change time" height="350" />
+						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						</br> (Press down to learn more.) 
+						</p>
+                    </div>
+				</section>
+				<section id="change_line">
+					<div class="header_bar centrered">
+						<div class="header_title">04</div>
+					</div>
+					<h4>Line Graph</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_line.png" alt="line graph" height="300" />
+                        <p class="image-text">Source: Our World in Data</p>
+                    </div>
+				</section>
+				<section id="change_bar">
+					<div class="header_bar centrered">
+						<div class="header_title">04</div>
+					</div>
+					<h4>Bar Graph</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: Our World in Data</p>
+                    </div>
+				</section>
+			</section> 
+			<section>
+				<section id="magnitude">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">05</div>
+					</div>
+					<h4>Magnitude</h4>
+					<p class="text-small"> The following charts show size comparisons. These can be relative or absolute (need to see fine differences). Usually these show a 'counted' number rather than a calculated rate or percent
+					</p>
+					<div>
+                        <img src="pics/magnitude.png" alt="magnitude" height="300" />
+						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						</br> (Press down to learn more.) 
+						</p>
+                    </div>
+				</section>
+				<section id="bar_chart">
+					<div class="header_bar centrered">
+						<div class="header_title">05</div>
+					</div>
+					<h4>Bar Graph</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: </p>
+                    </div>
+				</section>
+			</section> 
+			<section>
+				<section id="ranking">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">06</div>
+					</div>
+					<h4>Ranking</h4>
+					<p class="text-small"> Use where an item's position in an ordered list is more important than its absolute or relative value. Don't be afraid to highlight the points of interest.  
+					</p>
+					<div>
+                        <img src="pics/ranking.png" alt="magnitude" height="350" />
+						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						</br> (Press down to learn more.) 
+						</p>
+                    </div>
+				</section>
+				<section id="bar_chart">
+					<div class="header_bar centrered">
+						<div class="header_title">06</div>
+					</div>
+					<h4>Bar & Column Chart</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: </p>
+                    </div>
+				</section>
+			</section> 
+			<section>
+				<section id="distribution">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">07</div>
+					</div>
+					<h4>Distribution</h4>
+					<p class="text-small"> Show the values in the dataset and how often they occur. The shape (or the skew) of a distribution can be a memorable way of highlighting the lack of uniformity of equality in the data. For example, case mortality rate. 
+					</p>
+					<div>
+                        <img src="pics/distribution.png" alt="distribution" height="300" />
+						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						</br> (Press down to learn more.) 
+						</p>
+                    </div>
+				</section>
+				<section id="histogram">
+					<div class="header_bar centrered">
+						<div class="header_title">07</div>
+					</div>
+					<h4>Histogram</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: </p>
+                    </div>
+				</section>
+			</section> 
+			<section>
+				<section id="part_whole">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">08</div>
+					</div>
+					<h4>Part of a Whole</h4>
+					<p class="text-small"> Show how a single entity can be broken down into its component elements. If the reader is primarily interested in the size of the components, considera magnitude-type chart instead. 
+					</p>
+					<div>
+                        <img src="pics/part_whole.png" alt="part_whole" height="300" />
+						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						</br> (Press down to learn more.) 
+						</p>
+                    </div>
+				</section>
+				<section id="pie_chart">
+					<div class="header_bar centrered">
+						<div class="header_title">08</div>
+					</div>
+					<h4>Pie Chart</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: </p>
+                    </div>
+				</section>
+				<section id="stacked_bar">
+					<div class="header_bar centrered">
+						<div class="header_title">08</div>
+					</div>
+					<h4>Stacked Bar</h4>
+					<p class="text-small"> BLAH BALH
+					</p>
+					<div>
+                        <img src="pics/covid19_bar.png" alt="bar graph" height="300" />
+                        <p class="image-text">Source: </p>
+                    </div>
+				</section>
+			</section>
+			<!-- SECTION 3 Best Practice -->
+			<section id="designing_responsibly" data-background="#1bb580ff">
+				<div class="title_container">
+					<h1 class="white">Design Reponsible Data Visualisations in a Crisis</h1>
+				</div>
+			</section>
+			<section id="responsible_best_one">
+				<div class="header_bar centregreen">
+					<div class="header_title">09</div>
+				</div>
+				<h4>Choose Colours Carefully</h4>
+				<p class="text-small">We associate red with danger. The effect of a map full of red bubbles or different (scarier) shades of red is panic. Consider choosing more neutral colours (ie blue) and avoid using these ‘danger’ colours when creating COVID 19 visuals.
+				</p>
+				<div>
+					<img src="pics/who_map.png" alt="colour map" height="300" />
+					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Orgasnisation Dashboard</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_two">
+				<div class="header_bar centregreen">
+					<div class="header_title">10</div>
+				</div>
+				<h4>Be Careful with Absolute Numbers</h4>
+				<p class="text-small"> When comparing across counrties or time, relative numbers may provide a more accurate picture. In the map on the left, we are looking at the total number of cases whereas the map on the right shows the number of cases per 100,000.
+				</p>
+				<div>
+					<img src="pics/relative_abolute.png" alt="realtive abolute" height="300" />
+					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Kenneth Field</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_three">
+				<div class="header_bar centregreen">
+					<div class="header_title">11</div>
+				</div>
+				<h4>Pay Attention to Your X & Y Axises</h4>
+				<p class="text-small"> Cropping the axis can remove important context from the visual. In the caes below, the cropped axis makes the fatality rate seems worse than it is by removing the context that the vast majority of people survive. 
+				</p>
+				<div>
+					<img src="pics/axis_chart.png" alt="axi chart" height="300" />
+					<p class="image-text"> Source <a href="https://www.esri.com/arcgis-blog/products/product/mapping/mapping-coronavirus-responsibly/" target="_blank">Andy Cotgreave</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_four">
+				<div class="header_bar centregreen">
+					<div class="header_title">12</div>
+				</div>
+				<h4>Consider Using a Logarithmic Scale</h4>
+				<p class="text-small">When visualising a variable growing exponential, a linear scale can obscure important details. For example, the US and Italy look like they are on similar trajectories on the linear scale whereas it is clear with the logarithmic scale that COVID-19 cases are growing faster in the US.
+				</p>
+				<div>
+					<img src="pics/linear_log.png" alt="log" height="300" />
+					<p class="image-text"> Source <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a> 
+					</p>
+				</div>
+			</section>
+			<section id="responsible_best_five">
+				<div class="header_bar centregreen">
+					<div class="header_title">13</div>
+				</div>
+				<h4>Embrace Complexity</h4>
+				<p class="text-small">There is a great deal of uncertainty around COVID-19. Try to find ways to convey that uncertainty in the data. For example, adding the simple phrase ‘we know of x cases’ helps to convey the message that the data we have is incomplete. 
+				</p>
+				<div>
+					<img src="pics/weknowof_map.png" alt="weknowof" height="300" />
+					<p class="image-text"> Source <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+					</p>
+				</div>
+			</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				center: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
