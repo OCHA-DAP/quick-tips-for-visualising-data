@@ -1,3 +1,96 @@
 .print-pdf .pdf-page .header_bar {
 	margin-top: 0 !important;
 }
+
+body,
+.text-small,
+.text-small-centre,
+.reveal p {
+	color: #333;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 24px !important;
+	line-height: 1.65;
+}
+
+.reveal h1, 
+.reveal h2, 
+.reveal h3, 
+.reveal h4, 
+.reveal h5, 
+.reveal h6 {
+	font-family: 'Arvo', serif;
+}
+
+.reveal h1 {
+	font-size: 73px;
+}
+
+.reveal h2 {
+	font-size: 59px;
+}
+
+.reveal h3 {
+	font-size: 47px;
+}
+
+.reveal h4 {
+	font-size: 38px;
+}
+
+.reveal h5 {
+	font-size: 30px;
+}
+
+.reveal h6 {
+	font-size: 19px;
+}
+
+.reveal a {
+	color: #007CE1;
+}
+
+.white a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.white a:hover {
+	color: #007CE1;
+}
+
+/*section {
+	text-align: left;
+}*/
+
+/*section > *:not(:first-child) {
+    text-align: center;
+}*/
+
+section.has-dark-background,
+section.has-light-background {
+	text-align: center;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.title_container {
+	margin-top: 0 !important;
+}
+
+.header_bar {
+	margin-bottom: 30px !important;
+	width: fit-content;
+}
+
+.header_bar .header_title {
+	padding-right: 20px;
+}
+
+.reveal ol {
+	min-width: 410px;
+}
+
+.reveal .controls .controls-arrow:before, 
+.reveal .controls .controls-arrow:after {
+	background-color: #007CE1;
+}
