@@ -58,14 +58,6 @@ body,
 	color: #007CE1;
 }
 
-/*section {
-	text-align: left;
-}*/
-
-/*section > *:not(:first-child) {
-    text-align: center;
-}*/
-
 section.has-dark-background,
 section.has-light-background {
 	text-align: center;
@@ -88,6 +80,10 @@ section.has-light-background {
 
 .reveal ol {
 	min-width: 410px;
+}
+
+.reveal video {
+	max-width: 80%;
 }
 
 .reveal .controls .controls-arrow:before, 
