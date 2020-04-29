@@ -4,12 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Quick Tips for Visualising Data</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
 		<link rel="stylesheet" href="css/theme/white_custom.css" id="theme">
+		<link rel="stylesheet" href="css/overrides.css">
 
 		<!-- Centre Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -190,7 +191,7 @@
 				</p>
 				<div>
 					<img src="pics/who_map.png" alt="colour map" height="300" />
-					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Orgasnisation Dashboard</a> 
+					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Organisation Dashboard</a> 
 					</p>
 				</div>
 			</section>
@@ -506,12 +507,12 @@
 						</p>
                         <p class="text-small">
 							<ol start="1">
-								<li class=".text-small-centre"> Prepare & structure your data
+								<li class="text-small-centre"> Prepare & structure your data
 								</li>
-								<li class=".text-small-centre"> Insert a line graph 
+								<li class="text-small-centre"> Insert a line graph 
 								</li>
-								<li class=".text-small-centre"> Explore using a logarithmic scale</li>
-								<li class=".text-small-centre"> Customise the design</li>
+								<li class="text-small-centre"> Explore using a logarithmic scale</li>
+								<li class="text-small-centre"> Customise the design</li>
 							  </ol> 
 						</p>
 		
@@ -571,9 +572,9 @@
 					<h4>Further Reading</h4>
 					<p class="text-small">
 						<ol start="1">
-							<li class=".text-small-centre"> Tableau's<a href="https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19" target="_blank"> 10 considerations before you create another chart about COVID-19</a>
+							<li class="text-small-centre"> Tableau's<a href="https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19" target="_blank"> 10 considerations before you create another chart about COVID-19</a>
 							</li>
-							<li class=".text-small-centre"> Data Wrapper's <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank"> 17 (or so) responsible live visualizations about the coronavirus, for you to use</a>
+							<li class="text-small-centre"> Data Wrapper's <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank"> 17 (or so) responsible live visualizations about the coronavirus, for you to use</a>
 							</li>
 						  </ol> 
 					</p>
@@ -590,11 +591,13 @@
 			Reveal.initialize({
 				hash: true,
 				center: false,
+				width: '100%',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/menu/menu.js' }
 				]
 			});
 		</script>
