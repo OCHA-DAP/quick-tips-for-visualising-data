@@ -405,6 +405,12 @@ img {
   font-size:5px;
 }
 
+/* Span Clas 'popup' for underlying words that have tooltip*/
+span.popup {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
 /*.reveal .slides .present {
   height:770px!important;
   margin-bottom:50px!important;

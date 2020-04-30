@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/theme/white.css">
 		<link rel="stylesheet" href="css/theme/white_custom.css" id="theme">
 		<link rel="stylesheet" href="css/overrides.css">
+		<link rel="stylesheet" href="css/balloon.min.css">
 
 		<!-- Centre Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -33,51 +34,55 @@
 				<section id="frontcover" data-background="#1bb580">
                     <div class="title_container">
 						<h2 class="white">Quick Tips for Visualising Data</h2>
-						<h3 class="white">How to Visualise COVID-19 Data </h3>
+						<h3 class="white">Example from the COVID-19 Pandemic </h3>
                         <p class="text-small-centre white">
-                            Created by <a href="https://centre.humdata.org/" target="_blank" >Centre for Humanitarian Data</a> / <a href="http://twitter.com/humdata" target="_blank">@humdata</a>
+                            Created by <a href="https://centre.humdata.org/" target="_blank" >OCHA's Centre for Humanitarian Data</a> / <a href="http://twitter.com/humdata" target="_blank">@humdata</a>
                         </p>
                         <p class="text-small-centre white">
                             Press right on your keyboard or swipe 
-                            right to navigate
+                            right to navigate. 
                         </p>
                     </div>
 				</section>
-				<section id="contents">
-                    <div class="header_bar centregreen">
-                        <div class="header_title">Contents</div>
-                    </div>
-                    <p class="text-small-centre">In this short lesson we will go through best practices for creating visualisations using COVID-19 data and how to create a simple line chart in Excel.</p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/Why_We_Visualise">Why We Visualise Data</a>
-					</p>
-					<p class="text-small-centre">
-                        <a class="contents_link" href="#/undertstand_context">Understand the Data</a>
-					</p>   
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/designing_responsibly">Designing Responsibly</a>
-                    </p>                                        
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/chart_choices">Choose the Right Visualisation</a>
-                    </p>
-                    <p class="text-small-centre">
-                        <a class="contents_link" href="#/do_it_yourself">Create Your Own Visualisation</a>
-					</p>                                                               
-                </section>
 				<section id="intro">
                     <div class="header_bar centregreen">
                         <div class="header_title">Introduction</div>
                     </div>
-					<p class="text-small">The choices we make when we visualise data influence how people see, understand, and react to the data. </p>
-					<p class="text-small">Click through to learn best practices for making responsible data visualisations with COVID-19 data.</p>
-					<p class="text-small"> How much time do you have to learn? </p>
-					<p class="text-small">
-						<ul>
-							<li class="text-small"><b>Five Minutes:</b> Read the tips on visualisation.</li>
-							<li class="text-small"><b>Fifteen Minutes:</b> Read the tips on visualisation and go through our step-by-step guide and demo video for making a chart in Excel.</li>
+					<p class="text-small">The choices we make when we visualise data influence how people see, understand, and react to the underlying data. In this short lesson, we have compiled best practices and tips for making accurate and compelling visualisations with COVID-19 data.</p>
+					<p class="text-small">Through this short learning session, 	you will learn: 
+						<ol class="text-small">
+							<li>practice for designing responsible data visualisations</li>
+							<li>How to identify and visually represent different relationships in data. </li>
+							<li>How to prepare and structure your data in order to make a simple line chart</li>
+						</ol>
+					</p>
+					<p class="text-small">How much time do you have to learn? 
+						<ul class="text-small">
+							<li><b>Five Minutes:</b> Read through and pick up tips on how to improve your visualisations</li>
+							<li><b>Fifteen Minutes:</b> Read the tips on visualisation and put them into practice with our step-by-step guide and demo video for making a line chart in Excel. </li>
 						  </ul>
-                    </p>
+					</p>
 				</section>
+				<section id="contents">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Table of Contents</div>
+                    </div>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/Why_We_Visualise">01: Why We Visualise Data</a>
+					</p>
+					<p class="text-small-centre">
+                        <a class="contents_link" href="#/undertstand_context">02: Understand the Data</a>
+					</p>   
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/designing_responsibly">03:Designing Responsibly</a>
+                    </p>                                        
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/chart_choices"> 04: Choose the Right Visualisation</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/do_it_yourself">05: Create Your Own Visualisation</a>
+					</p>                                                          
+                </section>
 			<!-- SECTION 1 WHY -->
 				<section id="Why_We_Visualise" data-background="#007ce0">
                     <div class="title_container">
@@ -96,13 +101,13 @@
 				</section> 
 				<section id="to_explain_how">
 					<div class="header_bar centreblue">
-						<div class="header_title">02</div>
+						<div class="header_title">01</div>
 					</div>
 					<h4>How to Explain with Visualisation</h4>
-					<p class="text-small"> Explanatory data visualisation requires a defined audience and clear objective. Before you start to visualise, ask yourself the following: 
+					<p class="text-small"> Explanatory data visualisation requires a defined audience and clear objective. Before you start to create your visualisation, ask yourself the following: 
 						<ul class="text-small">
-							<li>What am I trying to say? And how will a visualisation help me do that?</li>
-							<li>Who am I trying to say it to? And how does the visualisation need to be tailored for my audience?</li>
+							<li><b>What am I trying to say?</b> The message that you are trying to convey should guide the design choices that you make.</li>
+							<li><b>Who am I trying to say it to?</b> Thinking about who your audience is and how they will be interacting and using your visualisation should help to focus your final product.</li>
 						</ul>
 					</p>
 				</section> 
@@ -115,7 +120,7 @@
 		<section>
 			<section id="context">
 				<div class="header_bar centrered">
-					<div class="header_title">03</div>
+					<div class="header_title">02</div>
 				</div>
 				<h4>Before you start, get to know your data</h4>
 				<p class="text-small">Before digging into a COVID-19 data visualisation, it is important to spend a bit of time understanding what can and cannot be said based on the data.
@@ -130,7 +135,7 @@
 			</section>
 			<section id="context_metadata">
 				<div class="header_bar centrered">
-					<div class="header_title">03</div>
+					<div class="header_title">02</div>
 				</div>
 				<h4>Explore the Metadata</h4>
 				<p class="text-small"> Metadata is data about data. Digging into the metadata before you download can save you time and let you know whether the dataset even has the data you need. 
@@ -142,7 +147,7 @@
 			</section>
 			<section id="context_metadata">
 				<div class="header_bar centrered">
-					<div class="header_title">03</div>
+					<div class="header_title">02</div>
 				</div>
 				<h4>Read the data dictionary</h4>
 				<p class="text-small"> Some organisations will publish data dictionaries along with their data. The data dictionary provides definitions for each variable in the dataset and helps you to understand what can and cannot be said with the data.</p>
@@ -153,14 +158,14 @@
 		</section>
 			<section id="epi_terms">
 				<div class="header_bar centrered">
-					<div class="header_title">04</div>
+					<div class="header_title">02</div>
 				</div>
 				<h4>Common COVID-19 Data Points</h4>
 				<p class="text-small"> Common figures that are included in COVID-19 data sets. 
 				</p>
 				<p class="text-small"> 
 					<ol class="text-small">
-						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "prevalence").</li>
+						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" data-balloon-length="large" aria-label="Prevalence in epidemiology is the proportion of a particular population found to be affected by a medical condition (typically a disease or a risk factor such as smoking or seat-belt use) at a specific time" data-balloon-pos="up">prevalence</span>").</li>
 						<li><b>New Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe.  (Also known as “incidence”).</li>
 						<li><b>Cumulative Cases</b> are the total confirmed cases up to a given point in time, without subtracting people who have recovered or died. These numbers over time only get larger and larger as new cases are added.</li>
 					</ol> 
@@ -169,7 +174,7 @@
 		<!-- SECTION 3 Best Practice -->
 			<section id="designing_responsibly" data-background="#1bb580ff">
 				<div class="title_container">
-					<h1 class="white">Designing Reponsibly</h1>
+					<h1 class="white">Designing Responsibly</h1>
 				</div>
 			</section>
 			<section id="responsible_vi">
@@ -402,7 +407,7 @@
                     	<div class="header_title">15</div>
 					</div>
 					<h4>Part of a Whole</h4>
-					<p class="text-small"> Show how a single entity can be broken down into its component elements. People are not very good at defecting small differnces in shapes so if you are interested in showing the size of the components, a magnitude or ranking type of chart is often better.
+					<p class="text-small"> Show how a single entity can be broken down into its component elements. People are not very good at detecting small differnces in shapes so if you are interested in showing the size of the components, a magnitude or ranking type of chart is often better.
 					</p>
 					<div>
                         <img src="pics/part_whole.png" alt="part_whole" height="300" />
