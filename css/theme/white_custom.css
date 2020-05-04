@@ -351,11 +351,11 @@ body {
 }
 
 .centreblue {
-    background-color: #007ce0;
+    background-color: #007CE1;
 }
 
 .centrebluefill{
-    fill: #007ce0;
+    fill: #007CE1;
 }
 
 .centrered {
@@ -399,6 +399,11 @@ body {
 
 img {
   border-width:0px!important;
+}
+
+.reveal section img.no_shadow {
+  border: none;
+  box-shadow: none; 
 }
 
 .reveal table.kat_table {
