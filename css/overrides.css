@@ -86,7 +86,18 @@ section.has-light-background {
 	max-width: 80%;
 }
 
-.reveal .controls .controls-arrow:before, 
-.reveal .controls .controls-arrow:after {
-	background-color: #007CE1;
+.reveal section .logos img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin-right: 30px;
+	width: 150px;
+}
+.reveal section .logos img:last-child {
+	margin-right: 0;
+}
+
+.slide-menu-button a,
+.slide-menu-button a:hover {
+	color: #333;
 }
