@@ -115,7 +115,7 @@
 					</p>
 				</section> 
 		<!-- SECTION 2 Context -->
-			<section id="undertstand_context" data-background="#f2645a" data-menu-title="Understand the Data">
+			<section id="undertstand_data" data-background="#f2645a" data-menu-title="Understand the Data">
 				<div class="title_container">
 					<h1 class="white">Understand the Data</h1>
 				</div>
@@ -130,8 +130,8 @@
 				</p>
 				<p class="text-small">The first step is to understand the definitions of the data included in your dataset. To do this, you want to review the following:
 					<ol class="text-small">
-						<li>the metadata </li>
-						<li>the data dictionary</li>
+						<li>the <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Metadata is additional information or documentation about your dataset that will make it easier for others to understand and put your data into context." data-balloon-pos="up">metadata </span> </li>
+						<li>the <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="A data dictionary is used to catalog and communicate the structure and content of data, and provides meaningful descriptions for individually named data objects." data-balloon-pos="up">data dictionary</span></li>
 					</ol>
 				</p>
 				<p class="text-bottom"> Press down to learn more about metadata and data dictionaries</p> 
@@ -144,8 +144,8 @@
 				<p class="text-small"> Metadata is data about data. Reviewing the metadata before you download a new dataset can save you time and let you know whether the data you are about to download even has what you need. The Humanitarian Data Exchange requires all data shared on the platform to include a few essential metadata fields.
 				</p>
 					<img src="pics/hdx_metadata.png" alt="colour map" height="300" />
-					<p class="image-text"> Read more about <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">HDX Metadata</a> 
-					</br> Press down to learn about data dictionaries.
+					<p class="image-text"> Click here to read more about <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">HDX Metadata</a> 
+					</br> <b style="color:#333">Press down to learn about data dictionaries.</b>
 					</p>
 			</section>
 			<section id="context_data_dictionary" data-menu-title="Data Dictionary">
@@ -159,7 +159,7 @@
 					</p>
 			</section>
 		</section>
-			<section id="epi_terms" data-menu-title="COVID-19 Data Points">
+			<section id="common_terms" data-menu-title="COVID-19 Data Points">
 				<div class="header_bar centrered">
 					<div class="header_title">02</div>
 				</div>
@@ -168,8 +168,8 @@
 				</p>
 				<p class="text-small"> 
 					<ol class="text-small">
-						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Prevalence in epidemiology is the proportion of a particular population found to be affected by a medical condition (typically a disease or a risk factor such as smoking or seat-belt use) at a specific time" data-balloon-pos="up">prevalence</span>").</li>
-						<li><b>New Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe.  (Also known as “<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Incidence in epidemiology is a measure of the probability of occurrence of a given medical condition in a population within a specified period of time. " data-balloon-pos="up">incidence</span>").</li>
+						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Prevalence is the proportion of a population found to have a condition (typically a disease or a risk factor such as smoking). Prevalence can be measured at a particular point in time (point prevalence), or over a specified period such as a year (period prevalence)." data-balloon-pos="up">prevalence</span>").</li>
+						<li><b>New Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe.  (Also known as “<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="The number of new cases of a health event (such as development of a disease, or reaction to a medicine) that occur during a specific time period, usually a year, in a specified population. Incidence is therefore also a measure of the risk of experiencing the health event during a certain period of time." data-balloon-pos="up">incidence</span>").</li>
 						<li><b>Cumulative Cases</b> are the total confirmed cases up to a given point in time, without subtracting people who have recovered or died. These numbers over time only get larger and larger as new cases are added.</li>
 					</ol> 
 				</p>
@@ -213,8 +213,8 @@
 					</p>
 					<div>
 						<img src="pics/linear_log.png" alt="log" height="300" />
-						<p class="image-text"> Source <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a>
-						</br>Press down for more information
+						<p class="image-text"> Source: <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a>
+						</br> <b style="color:#333">Press down to learn more.</b>
 						</p>
 					</div>
 				</section>
@@ -232,7 +232,7 @@
 				</section>
 			</section>
 			<section>
-			<section id="responsible_relative&absolute" data-menu-title="Relative & Absolute">
+			<section id="responsible_relative_absolute" data-menu-title="Relative & Absolute">
 				<div class="header_bar centregreen">
 					<div class="header_title">03</div>
 				</div>
@@ -250,12 +250,14 @@
 					<div class="header_title">03</div>
 				</div>
 				<h4>Using Relative COVID-19 Numbers</h4>
-				<p class="text-small">The  choropleth map is an example of a visualisation that works best with relative numbers because they provide a common reference to compare magnitude across countries or regions. In the case of COVID-19, population size is likely important for comparing the magnitude of the outbreak at any given snapshot in time. 
+				<p class="text-small">The  choropleth map is an example of a visualisation that works best with relative numbers because they provide a common reference to compare magnitude across countries or regions.
 				</p>
 				<div>
 					<img src="pics/relative_map.png" alt="log" height="325" />
-					<p class="image-text"> Source <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a> 
+					<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a> 
+					</br> <b style="color:#333">Press down to learn more.</b>
 					</p>
+
 				</div>
 			</section>
 			<section id="responsible_absolute" data-menu-title="Absolute Values">
@@ -272,7 +274,7 @@
 				</div>
 			</section>
 			</section>
-			<section id="responsible_best_five" data-menu-title="Communicate Uncertainty">
+			<section id="responsible_uncertainty" data-menu-title="Communicate Uncertainty">
 				<div class="header_bar centregreen">
 					<div class="header_title">03</div>
 				</div>
@@ -302,7 +304,7 @@
 						<li>Change Over Time</li>
 						<li>Comparison</li>
 						<li>Distribution</li>
-						<li>Part of a Whole</li>
+						<li>Part-to-Whole</li>
 						<li>Geospatial</li>
 					</ol>
 				</p>
@@ -313,16 +315,16 @@
                     	<div class="header_title">04</div>
 					</div>
 					<h4>Change Over Time</h4>
-					<p class="text-small"> If you have time series data, a common relationship to visualise is change over time. Make sure to plot the timeline on the X-axis. The following charts are options to illustrate trends over time.
+					<p class="text-small"> If you have <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="A series of data points ordered in time." data-balloon-pos="up">time series</span> data, a common relationship to visualise is change over time. Make sure to plot the timeline on the X-axis. The following charts are options to illustrate trends over time.
 					</p>
 					<div>
                         <img src="pics/change_centreV.png" alt="change_over_time" height="300"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
-						</br> Press down to learn more
+						</br> <b style="color:#333">Press down to learn more</b>
 						</p>
                     </div>
 				</section>
-				<section id="line" data-menu-title="Line Graph">
+				<section id="line_graph" data-menu-title="Line Graph">
 					<div class="header_bar centrered">
 						<div class="header_title">04</div>
 					</div>
@@ -331,11 +333,11 @@
 					<div>
                         <img src="pics/covid19_line.png" alt="line graph" height="300" />
                         <p class="image-text">Source: Our World in Data
-						</br> Press down to see more examples.
+						</br> <b style="color:#333">Press down to see more examples</b>
 						</p>
                     </div>
 				</section>
-				<section id="bar" data-menu-title="Bar Chart">
+				<section id="bar_chart" data-menu-title="Bar Chart">
 					<div class="header_bar centrered">
 						<div class="header_title">04</div>
 					</div>
@@ -345,11 +347,11 @@
 					<div>
                         <img src="pics/covid19_bar.png" alt="bar chart" height="300" />
                         <p class="image-text">Source: Worldometer 
-						</br> Press down to see more examples
+						</br> <b style="color:#333"> Press down to see more examples</b>
 						</p>
                     </div>
 				</section>
-				<section id="area" data-menu-title="Stacked Area Graph">
+				<section id="stacked_area" data-menu-title="Stacked Area Graph">
 					<div class="header_bar centrered">
 						<div class="header_title">04</div>
 					</div>
@@ -373,7 +375,7 @@
 					<div>
                         <img src="pics/mag_rank_centrev.png" alt="mag_ranking" height="300"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
-						</br> Press down to learn more
+						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
                     </div>
 				</section>
@@ -401,7 +403,7 @@
 					<div>
                         <img src="pics/distribution_centerv.png" alt="distribution" height="300"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
-						</br> Press down to learn more
+						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
                     </div>
 				</section>
@@ -423,13 +425,13 @@
                		 <div class="header_bar centrered">
                     	<div class="header_title">04</div>
 					</div>
-					<h4>Part- To - Whole</h4>
+					<h4>Part-To-Whole</h4>
 					<p class="text-small"> These charts are useful for showing how various parts of the data comprise the whole. While useful with a small number of categories they can quickly become difficult to read. If you are mainly interested in comparing the size of the parts, often a simple bar chart will be easier to read. 
 					</p>
 					<div>
                         <img src="pics/part_whole_centrev.png" alt="part_whole" height="300"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
-						</br> Press down to learn more
+						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
                     </div>
 				</section>
@@ -443,7 +445,7 @@
 					<div>
 						<img src="pics/donut_chart.png" alt="pie" width="500"/>
 						<p class="image-text">Source: <a href="https://fts.unocha.org/emergencies/911/summary/2020" target="_blank">OCHA Financial Tracking Services</a>
-						</br> Press down to see more chart options. 
+						</br> <b style="color:#333"> Press down to see more chart options.</b>
 						</p>
                     </div>
 				</section>
@@ -471,13 +473,13 @@
 					<div>
                         <img src="pics/geospatial_centrev.png" alt="geopatial" height="300" />
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
-						</br> Press down to learn more.
+						</br> <b style="color:#333"> Press down to learn more. </b>
 						</p>
                     </div>
 				</section>
-				<section id="clorapleth" data-menu-title="Cloropleth Map">
+				<section id="cloropleth" data-menu-title="Cloropleth Map">
 					<div class="header_bar centrered">
-						<div class="header_title">16</div>
+						<div class="header_title">04</div>
 					</div>
 					<h4>BASIC CHOROPLETH</h4>
 					<p class="text-small">This standard approach for putting data on a map, displays geographical areas that are coloured, shaded or patterned in relation to a data variable. It is often better to use rates rather than totals for this type of map.
@@ -532,12 +534,12 @@
                         <p class="text-small"> <b>Download data from HDX:</b> Click on the video below to learn how to find and download data from the Humanitarian Data Exchange. 
 						</p>
 						<video controls autoplay>
-							<source data-autoplay src="vid/download_data.mp4" type="video/mp4" />
+							<source data-autoplay src="vid/download_data.mp4" type="video/mp4"/>
 						</video>
-						<p class="image-text"> Press down for the next step. 
+						<p class="image-text"><b style="color:#333"> Press down for the next step.</b>
 						</p>
 					</section> 
-					<section id="create_line_1">
+					<section id="create_line_2">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
@@ -546,10 +548,10 @@
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_sc1.mp4" type="video/mp4" />
 						</video>
-						<p class="image-text"> Press down for the next step. 
+						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
 					</section> 
-					<section id="create_line_2">
+					<section id="create_line_3">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
@@ -558,10 +560,10 @@
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_sc2.mp4" type="video/mp4" />
 						</video>
-						<p class="image-text"> Press down for the next step. 
+						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
 					</section> 
-					<section id="create_line_3">
+					<section id="create_line_4">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
@@ -570,10 +572,10 @@
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_sc3.mp4" type="video/mp4" />
 						</video>
-						<p class="image-text"> Press down for the next step. 
+						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
 					</section> 
-					<section id="create_line_4">
+					<section id="create_line_5">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
@@ -584,30 +586,48 @@
 						  </video>
 					</section> 
 				</section> 
-				<section id="further_reading">
-					<div class="header_bar centreblue">
-						<div class="header_title">05</div>
-					</div>
-					<h4>Further Reading</h4>
-					<p class="text-small">
-					</br>
-						<ol start="1">
-							<li class ="text-small-centre">The Centre for Humanitarian Data's <a href="https://centre.humdata.org/data-literacy/" target="_blank"> Data Literacy Page</a> </li>
-							<li class="text-small-centre"> The resources in this lesson (videos, slides and step-by-step guide) are all available for download and offline use in this <a href="https://drive.google.com/drive/u/1/folders/1Nz1s_ehItFQCeO3lc4huo_2vGFOg1trg" target="_blank"> google drive folder</a>
-							</li>
-							<li class="text-small-centre"> Amanda Makulec's<a href="https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19" target="_blank"> 10 considerations before you create another chart about COVID-19</a>
-							</li>
-							<li class="text-small-centre"> Data Wrapper's <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank"> 17 (or so) responsible live visualizations about the coronavirus, for you to use</a>
-							</li>
-						  </ol> 
-					</p>
-				</section> 
 				<section id="quiz" data-menu-title="Take our Quiz">
-					<div class="header_bar centreblue">
+					<div class="header_bar centregreen">
 						<div class="header_title">06</div>
 					</div>
 					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6Wrf-HKCcP3UX38E80JvEM1HaRUfppf2ZQYtFWcVQ9h-6Bw/viewform?embedded=true" width="1000" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 				</section>
+				<section id="additional_resources">
+					<div class="header_bar centregreen">
+						<div class="header_title">Annex</div>
+					</div>
+					<h4>Additional Resources</h4>
+					<p class="text-small">
+					</br>
+						<ol start="1">
+							<li class ="text-small-centre">The Centre for Humanitarian Data's <a href="https://centre.humdata.org/data-literacy/" target="_blank"> Data Literacy Page</a> </li>
+							<li class="text-small-centre"> The resources in this lesson (videos, slides and step-by-step guide) are available for download and offline use in <a href="https://drive.google.com/drive/u/1/folders/1Nz1s_ehItFQCeO3lc4huo_2vGFOg1trg" target="_blank"> this google drive folder</a>
+							</li>
+							<li class="text-small-centre"> Amanda Makulec & Tableau's <a href="https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19" target="_blank"> 10 considerations before you create another chart about COVID-19</a>
+							</li>
+							<li class="text-small-centre"> Data Wrapper's <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank"> 17 (or so) Responsible lLive Visualizations about the Coronavirus, for you to use</a>
+							</li>
+							<li class="text-small-centre"> Vox.com Video <a herf="https://www.youtube.com/watch?v=O-3Mlj3MQ_Q" target= "_blank"> How coronavirus charts can mislead us</a></li>
+						  </ol> 
+					</p>
+				</section> 
+				<section id="glossary">
+					<div class="header_bar centregreen">
+						<div class="header_title">Annex</div>
+					</div>
+					<h4>Glossary of Terms</h4>
+					<p class ="text-ex-small">
+						<ul>
+							<li class="text-ex-small"> <b>Incidence:</b> The number of new cases of a health event (such as development of a disease, or reaction to a medicine) that occur during a specific time period, usually a year, in a specified population. Incidence is therefore also a measure of the risk of experiencing the health event during a certain period of time.<a href="https://www.eupati.eu/glossary/incidence/" target="_blank"> European Patients' Academy</a></li>
+							<li class ="text-ex-small"> <b>Prevalence:</b> Prevalence is the proportion of a population found to have a condition (typically a disease or a risk factor such as smoking). Prevalence can be measured at a particular point in time (point prevalence), or over a specified period such as a year (period prevalence). <a href="https://www.eupati.eu/glossary/prevalence/" target="_blank"> European Patients' Academy</a></li>
+							<li class ="text-ex-small"><b>Categorical Data</b> </li>
+							<li class ="text-ex-small"><b>Time Series</b> A series of data points ordered in time. <a href="https://towardsdatascience.com/almost-everything-you-need-to-know-about-time-series-860241bdc578" target="_blank"> Towards Data Science</a></li>
+							<li class ="text-ex-small"><b>Data Dictionary:</b> A data dictionary is used to catalog and communicate
+							the structure and content of data, and provides meaningful descriptions for individually named data objects. sData Strategy for the Secretary-General for Action by Everyone, Everywhere & <a href="https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries" target="_blank"> U.S. Geological Survey</a></li>
+							<li class ="text-ex-small"><b>Metadata:</b> Metadata is additional information or documentation about your dataset that will make it easier for others to understand and put your data into context.<a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank"> Centre for Humanitarian Data</a></li>
+						</ul> 
+					</p>
+				</section> 
 			</div>
 		</div>
 		

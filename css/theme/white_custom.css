@@ -299,7 +299,7 @@ body {
     margin-left:10% !important;
 }
 .text-ex-small {
-  font-size:0.5em !important;
+  font-size:0.65em !important;
   color:#595959 !important;
   text-align: justify;
   text-justify: inter-word;
@@ -343,7 +343,7 @@ body {
 }
 
 .green {
-    background-color: #4CAF50;
+    background-color: #1bb580;
 }
 
 .orange {
@@ -363,7 +363,7 @@ body {
 }
 
 .centreredfill {
-    fill:#E91E63;
+    fill:#f2645a;
 }
 
 .yellow {
@@ -371,7 +371,7 @@ body {
 }
 
 .red{
-    background-color:#F44336;
+    background-color:#f2645a;
 }
 
 .grey {
@@ -387,6 +387,7 @@ body {
     color:#999999;
     margin-top: 0;
 }
+
 
 .text-bottom{
     font-size:0.8em !important;
@@ -406,9 +407,6 @@ img {
   box-shadow: none; 
 }
 
-.reveal table.kat_table {
-  font-size:5px;
-}
 
 /* Span Clas 'popup' for underlying words that have tooltip*/
 span.popup {
