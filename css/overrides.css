@@ -99,5 +99,15 @@ section.has-light-background {
 
 .slide-menu-button a,
 .slide-menu-button a:hover {
-	color: #333;
+	color: #007CE1;
+}
+
+.reveal.has-light-background .slide-menu-button a,
+.slide-menu-button a:hover {
+	color: #FFF
+}
+
+.reveal.has-dark-background .slide-menu-button a,
+.slide-menu-button a:hover {
+	color: #FFF
 }
