@@ -70,6 +70,7 @@ section.has-light-background {
 }
 
 .header_bar {
+	
 	margin-bottom: 30px !important;
 	width: fit-content;
 }
@@ -156,7 +157,6 @@ section.has-light-background {
 		text-align: left;
 		line-height: 1.5;
 	}
-
 	.reveal .text-small-centre {
 		font-size: 16px; 
 		text-align: left;
