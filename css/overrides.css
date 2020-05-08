@@ -111,3 +111,85 @@ section.has-light-background {
 .slide-menu-button a:hover {
 	color: #FFF
 }
+
+.reveal .slide-number a {
+	color: #007ce1; }
+
+.reveal.has-light-background .slide-number a {
+	color: #FFF; }
+	
+.reveal.has-dark-background .slide-number a {
+	color: #FFF;
+	}
+
+
+	/* Fonts & Layout for mobile */
+@media screen and (max-width: 600px) {
+	
+	.reveal h1 {
+		font-size: 40px;
+	}
+	.reveal h2 {
+		font-size: 30px;
+	}
+	.reveal h3 {
+		font-size: 20px;
+	}
+	.reveal h4 {
+		font-size: 20px;
+	}
+
+	.reveal .text-small {
+		font-size: 16px !important; 
+		text-align: left;
+		line-height: 1.5;
+	}
+	
+	/* for slides with lots of text */
+	.reveal .long-para {
+		font-size: 15px ; 
+		text-align: left;
+		line-height: 1.3;
+	}
+	.reveal .text-ex-small{
+		font-size: 12px !important; 
+		text-align: left;
+		line-height: 1.5;
+	}
+
+	.reveal .text-small-centre {
+		font-size: 16px; 
+		text-align: left;
+		line-height: 1.5;
+	}
+
+	.reveal p.image-text {
+		font-size: .4em !important; 
+	}
+
+	.reveal .header_title {
+		padding-left: 20px !important;
+		color: #ffffff;
+		line-height: 120px !important;
+		font-size: 1em !important;
+		font-weight: bold !important;
+	}
+
+	.reveal ol, ul {
+		min-width: 80%;
+	}
+
+	.reveal .text-bottom {
+		font-size: .4em !important;
+	}
+
+	.reveal .img-sm {
+		max-height : 35px;
+		margin: 0 auto;
+	}
+
+	.reveal .sm-mobile {
+		font-size: 16px !important;
+	}
+
+}
