@@ -183,11 +183,6 @@ section.has-light-background {
 		font-size: .4em !important;
 	}
 
-	.reveal .img-sm {
-		max-height : 35px;
-		margin: 0 auto;
-	}
-
 	.reveal .sm-mobile {
 		font-size: 16px !important;
 	}

@@ -232,7 +232,7 @@ body {
 }
   
 .img-sm {
-  max-height : 80px;
+  max-height : 280px;
   margin: 0 auto;
 }
 
@@ -425,7 +425,7 @@ body {
     width:80%;
     margin-left:10% !important;
     position:absolute !important;
-    top:600px !important;
+    top:625px !important;
 }
 
 img {

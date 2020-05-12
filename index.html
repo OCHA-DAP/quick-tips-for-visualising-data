@@ -39,7 +39,7 @@
                             Created by <a href="https://centre.humdata.org/" target="_blank" >OCHA's Centre for Humanitarian Data</a> / <a href="http://twitter.com/humdata" target="_blank">@humdata</a>
                         </p>
                         <p class="text-small-centre white">
-                            Press right on your keyboard or swipe left to navigate.
+                            Press right on your keyboard or swipe right to navigate.
                         </p>
                         <div class="logos"><img src="pics/logo-ocha-white.png" /><img src="pics/logo-centre-white.png" /></div>
                     </div>
@@ -48,13 +48,13 @@
                     <div class="header_bar centregreen">
                         <div class="header_title">Introduction</div>
                     </div>
-					<p class="text-small">The choices we make when we visualise data influence how people see, understand, and react to the underlying data. </p>
+					<p class="text-small">The choices we make when we visualise data  influence how people see, understand, and react to the underlying data. </p>
 					<p class="text-small">This session includes a series of slides to build your knowledge, a set of five short videos to demonstrate creating a graph and a short quiz to test your knowledge. Expected length of time to complete all sessions: 25 minutes.</p>
-					<p class="text-small">In this introductory session to visualising data, you will learn:
+					<p class="text-small">In this introductory session to visualising data using examples from the COVID-19 pandemic, you will learn:
 						<ol class="text-small">
-							<li>best practices for designing responsible data visualisations.</li>
+							<li>best practices for designing thoughtful data visualisations.</li>
 							<li>how to identify and visually represent different relationships in data. </li>
-							<li>how to prepare and structure your data in order to make a simple line chart.</li>
+							<li>how to prepare and structure your data in order to make a simple line graph.</li>
 						</ol>
 					</p>
 				</section>
@@ -71,7 +71,7 @@
                         <a class="contents_link" href="#/undertstand_context">02: Understand the Data</a>
 					</p>   
                     <p class="text-small-centre">
-                        <a class="contents_link" href="#/designing_responsibly">03: Designing Responsibly</a>
+                        <a class="contents_link" href="#/designing_responsibly">03: Designing Thoughtfully</a>
                     </p>                                        
                     <p class="text-small-centre">
                         <a class="contents_link" href="#/chart_choices"> 04: Choose the Right Visualisation</a>
@@ -89,25 +89,26 @@
 			<section>
 				<section id="instructions" data-menu-title="Instructions">
                     <div class="header_bar centregreen">
-                        <div class="header_title">How to Navigate the Sessions</div>
+                        <div class="header_title">How to Navigate the Session</div>
                     </div>
-					<p class="text-small">The progress bar at the bottom of your screen will let you know where you are in the course. If you would like to skip through the pages, you can do this using the navigation menu at the bottom left of your screen.  
+					<p class="text-small">The progress bar at the bottom of your screen lets you know where you are in the session. If you would like to skip through the pages, you can do this using the navigation menu at the bottom left of your screen.
 					</p>
-					<p class="text-small"> Each page will introduce a tip, concept or best practice for visualising data during the COVID-19 pandemic. Scroll through the pages using your keyboard or by clicking on the right and left arrows at the bottom right of your screen.
+					<p class="text-small"> Each page introduces a tip, concept or best practice for visualising data during the COVID-19 pandemic. Scroll through the pages using your keyboard or by clicking on the right and left arrows at the bottom right of your screen.
 					</p>
-					<p class="text-small"> On certain pages, there is the option to scroll down to learn more about a particular element or see concrete examples. Navigate to these pages using your keyboard or the down arrow at the bottom right of your screen.</p>
-					<div class="img-sm">
-					<img src="pics/nav_arrows.png" alt="nav_arrows" class="no_shadow"/>
-					</div>
+					<p class="text-small"> On certain pages, there is the option to scroll down to learn more about a particular topic. Navigate to these vertical pages using your keyboard or the down arrow at the bottom right of your screen.
+					</p>
 					<p class="text-bottom"> Press down to learn more about navigating the session</p> 
 				</section>
 				<section id="instructions_two">
                     <div class="header_bar centregreen">
-                        <div class="header_title">How to Navigate the Sessions</div>
+                        <div class="header_title">How to Navigate the Session</div>
 					</div>
-					</br>
-					</br>
-					<p class="text-small"> Now, click on the vertical arrow to return to the main navigation instructions page or click on the right arrow to start the course. 
+					<p class="text-small"> The navigation arrows at the bottom right of your screen are there to lead you through the session. In the example below, the left faded arrow indicates completed pages whereas both the down arrow and right arrow indicate pages you have yet to visit. 
+					</p>
+					<div class="img-standard">
+						<img src="pics/nav_arrows.png" alt="nav_arrows" class="no_shadow"/>
+					</div>
+					<p class="text-small"> Now that you understand how to navigate this session, click on the right arrow to start the session.
 					</p>
 				</section>
 			</section>
@@ -171,24 +172,34 @@
 					<div class="header_title">02</div>
 				</div>
 				<h4>Explore the Metadata</h4>
-				<p class="text-small"> Metadata is data about data. Reviewing the metadata before you download a new dataset can save you time and let you know whether the data you are about to download even has what you need. The Humanitarian Data Exchange requires all data shared on the platform to include a few essential metadata fields.
+				<p class="text-small"> Metadata is data about data. Reviewing the metadata before you download a new dataset can save you time and let you know whether the data you are about to download even has what you need. The Humanitarian Data Exchange requires all data shared on the platform to include <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">a few essential metadata fields</a>.
 				</p>
-				<div class="img-standard">
+				<p class="text-small"> Metadata provides basic information about a dataset such as:
+					<ol class="text-small">
+						<li> <b>Source:</b> who is releasing the dataset. </li>
+						<li><b>Date:</b> to include the date the dataset was initially released, the date it was last updated and released, and the expected frequency of update to anticipate the next release date.</li>
+						<li><b>Location:</b> the geographic extent of the dataset and the granularity of the dataset (e.g. for a specific number of countries with data at an admin1 level).</li>
+						<li><b>Methodology:</b> how the data was collected.</li>
+					</ol>
+				</p>
+				<p class="text-bottom"> Press down to learn more about data dictionaries</p>
+				<!-- <div class="img-standard">
 					<img src="pics/hdx_metadata.png" alt="colour map" />
 					<p class="image-text"> Click here to read more about <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">HDX Metadata</a> 
 					</br> <b style="color:#333">Press down to learn about data dictionaries</b>
 					</p>
-				</div>
+				</div> -->
 			</section>
 			<section id="context_data_dictionary" data-menu-title="Data Dictionary">
 				<div class="header_bar centrered">
 					<div class="header_title">02</div>
 				</div>
 				<h4>Read the data dictionary</h4>
-				<p class="text-small"> Some organisations will publish data dictionaries along with their data. The data dictionary provides definitions for each variable in the dataset and helps you to understand what can and cannot be said with the data.</p>
-				<div slass="img-standard">
-					<img src="pics/data_dictionary_v2.png" alt="colour map"  />
-					<p class="image-text"> Check out the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/technical-guidance/surveillance-and-case-definitions" target="_blank">WHO Case Based Reporting Data Dictionary</a> 
+				<p class="text-small"> Some organisations will publish data dictionaries along with their data. Oftentimes the headers in a data set are condensed to preserve space and make them machine readable. For example, a field with a header named “cases”, could mean cumulative cases, daily cases, active cases. </p>
+				<p class="text-small"> A data dictionary provides definitions for variables in a data set to understand what each variable represents. The example below provides an example of definition given for positive and suspected patients as well as the data type (numeric).</p>
+				<div class="img-standard">
+					<img src="pics/data_dictionaryv3.png" alt="data dictionary" />
+					<p class="image-text"> Source: <a href="https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics" target="_blank">Healthcare.gov Data Portal</a> 
 					</p>
 				</div>
 			</section>
@@ -202,125 +213,46 @@
 				</p>
 				<p class="text-small"> 
 					<ol class="text-small">
-						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Prevalence is the proportion of a population found to have a condition (typically a disease or a risk factor such as smoking). Prevalence can be measured at a particular point in time (point prevalence), or over a specified period such as a year (period prevalence)." data-balloon-pos="up">prevalence</span>").</li>
 						<li><b>New Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe.  (Also known as “<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="The number of new cases of a health event (such as development of a disease, or reaction to a medicine) that occur during a specific time period, usually a year, in a specified population. Incidence is therefore also a measure of the risk of experiencing the health event during a certain period of time." data-balloon-pos="up">incidence</span>").</li>
 						<li><b>Cumulative Cases</b> are the total confirmed cases up to a given point in time, without subtracting people who have recovered or died. These numbers over time only get larger and larger as new cases are added.</li>
+						<li><b>Deaths</b> are the number of confirmed deaths (and probable where that is available) for a given timeframe. The case fatality ratio is the number of deaths / number confirmed cases.</li>
+						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Prevalence is the proportion of a population found to have a condition (typically a disease or a risk factor such as smoking). Prevalence can be measured at a particular point in time (point prevalence), or over a specified period such as a year (period prevalence)." data-balloon-pos="up">prevalence</span>"). </li>
 					</ol> 
 				</p>
 			</section>
-		<!-- SECTION 3 Best Practice -->
-			<section id="designing_responsibly" data-background="#1bb580ff" data-menu-title="Designing Responsibly">
-				<div class="title_container">
-					<h1 class="white">Designing Responsibly</h1>
+		<section>
+			<section id="data_reliability" data-menu-title="Data Reliability">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
 				</div>
-			</section>
-			<section id="responsible_viz" data-menu-title="Design Considerations">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Design Considerations for Responsible Visualisations</h4>
-				<p class="text-small">The way we communicate about the COVID-19 pandemic has the potential to shape our audience's perception of risk and safety. 
+				<h4>Data Reliability</h4>
+				<p class="text-small"> The accuracy of these numbers is dependent on a number of factors. 
+					<ul class="text-small">
+						<li>The number of confirmed cases depends on the extent of testing being performed in a country, the accuracy of the tests, and the lag time between when a person is infected, symptomatic and tested.</li> 
+						<li>The number of deaths depends on if deaths outside of hospitals are counted and if tests are being performed within hospitals prior to or after death. </li>
+						<li>The number of active cases is calculated using data on recovered cases. Not all locations are providing proper data on recovered cases and as a result this data may not be reliable </li>
+					</ul>
 				</p>
-				<p class="text-small">The design choices we make influence how our audience interprets our underlying data. This is because through our design we choose to emphasise certain aspects of the data while potentially obscuring others. While there are no hard and fast rules for making design choices, the following are a few considerations to think about when creating COVID-19 data visualisations.
+				<p class="text-small">To ensure that the data you have is as up-to-date and accurate as possible, prioritise data from reputable sources and data with well documented collection methodologies.</p>
+				<p class="text-bottom"> Press down to learn more about reliable data sources</p> 
+			</section>
+			<section id="sources" data-menu-title="Data Sources">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h4>COVID-19 Data on HDX</h4>
+				<p class="text-small">HDX houses a diverse range of datasets on COVID-19 for humanitarians. This includes:</p>
+				<p class="text-small">
+					<ol class="text-small">
+						<li> Global case data from Johns Hopkins School of Public Health and <a herf="https://data.humdata.org/dataset/coronavirus-covid-19-cases-and-deaths" target="_blank">the World Health Organization.</a>
+						<li>Testing data from <a herf="https://data.humdata.org/dataset/total-covid-19-tests-performed-by-country" target="_blank">Our World in Data.</a></li>
+						<li>Global school closures from <a herf="https://data.humdata.org/dataset/covid-19-global-travel-restrictions-and-airline-information" target="_blank">UNESCO.</a></li>
+						<li>Global travel restrictions and Airline Information from <a herf="https://data.humdata.org/dataset/global-school-closures-covid19" target="_blank">the World Food Programme.</a>
+						</li>
+					</ol>
 				</p>
 			</section>
-			<section id="responsible_colours" data-menu-title="Choosing Colours">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Choose Colours Carefully</h4>
-				<p class="text-small">We associate red with danger. A map full of overlapping red circles will communicate danger and, as a result, may distract from other messages. Consider choosing neutral colours when creating COVID-19 visualisations.
-				</p>
-				<div class="img-standard">
-					<img src="pics/who_map.png" alt="colour map"  />
-					<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Organisation Dashboard</a> 
-					</p>
-				</div>
-			</section>
-			<section>
-				<section id="responsible_log" data-menu-title="Using a Logarithmic Scale">
-					<div class="header_bar centregreen">
-						<div class="header_title">03</div>
-					</div>
-					<h4>Consider Using a Logarithmic Scale</h4>
-					<p class="text-small">Plotting exponential growth on a linear scale can obscure important details such as the rate of growth. In the example below, the U.S. and Italy look like they are on similar trajectories on the linear scale whereas it is more apparent on the logarithmic scale that COVID-19 cases are continuing to grow in the U.S. while Italy is seeing a slowdown.
-					</p>
-					<div class="img-standard">
-						<img src="pics/linear_log.png" alt="log" />
-						<p class="image-text"> Source: <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a>
-						</br> <b style="color:#333">Press down to learn more</b>
-						</p>
-					</div>
-				</section>
-				<section id="responsible_log_about" data-menu-title="About the Logarithmic Scale">
-					<div class="header_bar centregreen">
-						<div class="header_title">03</div>
-					</div>
-					<h4>Linear and Logarithmic Scales</h4>
-					<p class="text-small">The most common form of a line graph uses a linear scale. Along the Y axis, the numbers progress in a linear form – 1, 2, 3, or 10, 20, 30, etc.
-					</p>
-					<p class="text-small">On a logarithmic scale, numbers on the Y-axis don’t increase in equal increments. Each interval increases by a set factor – often 10 but could be a factor of 3 or 350 or 3,500, etc.
-					</p>
-					<p class="text-small">A logarithmic scale prevents large numbers from skewing a whole graph and is good for measuring rates of change, particularly rates of growth.
-					</p>
-				</section>
-			</section>
-			<section>
-			<section id="responsible_relative_absolute" data-menu-title="Relative & Absolute">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Know the Difference between Relative and Absolute Values</h4>
-				<p class="text-small long-para"> With the message you want to convey in mind, explore different ways to represent the data you are visualising. When comparing across countries or regions, consider how your visualisation will change based on your choice to use absolute numbers (total # of confirmed cases) versus relative numbers (# of confirmed cases per X thousand people).  
-				</p>
-				<p class="text-small long-para">In their purest sense an absolute value is a value compared to nothing, and a relative value is created when two absolute values are compared to each other. Relative values are often presented as percentages, proportions, rates, etc., and are good for providing a reference for readers to judge magnitude and to compare magnitude across different categories. 
-				</p>
-				<p class="text-small long-para">The choice to use one or the other depends on the message you are trying to convey. 				
-				</p>
-				<p class="text-bottom"> Press down for examples</p> 
-			</section>
-			<section id="responsible_relative" data-menu-title="Relative Values">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Using Relative COVID-19 Numbers</h4>
-				<p class="text-small">The  choropleth map is an example of a visualisation that works best with relative numbers because they provide a common reference to compare magnitude across countries or regions.
-				</p>
-				<div class="img-standard">
-					<img src="pics/relative_map.png" alt="log" />
-					<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a> 
-					</br> <b style="color:#333">Press down to learn more</b>
-					</p>
-
-				</div>
-			</section>
-			<section id="responsible_absolute" data-menu-title="Absolute Values">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Using Absolute COVID-19 Numbers</h4>
-				<p class="text-small">COVID-19 logarithmic line graphs often use absolute numbers, why? The emphasis when using a logarithmic scale is the exponential change over time, or trajectory, rather than the magnitude. 
-				</p>
-				<div class="img-standard">
-					<img src="pics/absolute_log_ft.png" alt="log"  />
-					<p class="image-text"> Source <a href="https://www.ft.com/coronavirus-latest" target="_blank">John Burn-Murdoch at the Financial Times</a> 
-					</p>
-				</div>
-			</section>
-			</section>
-			<section id="responsible_uncertainty" data-menu-title="Communicate Uncertainty">
-				<div class="header_bar centregreen">
-					<div class="header_title">03</div>
-				</div>
-				<h4>Communicate Uncertainty</h4>
-				<p class="text-small">There is a great deal of uncertainty around COVID-19, and this is present in the data. Try to find ways to convey that uncertainty in your visualisation. For example, adding the simple phrase ‘we know of X cases’ helps convey the critical message that the data we have is incomplete.
-				</p>
-				<div class="img-standard">
-					<img src="pics/weknowof_map.png" alt="weknowof" />
-					<p class="image-text"> Source <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
-					</p>
-				</div>
-			</section>
+		</section>
 	<!-- SECTION 4 Charts -->
 			<section id="chart_choices" data-background="#f2645a" data-menu-title="Choose the Right Visualisation">
                 <div class="title_container">
@@ -352,7 +284,7 @@
 					<p class="text-small"> If you have <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="A series of data points ordered in time." data-balloon-pos="up">time series</span> data, a common relationship to visualise is change over time. Make sure to plot the timeline on the X-axis. The following charts are options to illustrate trends over time.
 					</p>
 					<div class="img-standard">
-                        <img src="pics/change_centreV.png" alt="change_over_time"/>
+                        <img src="pics/change.png" alt="change_over_time"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
 						</br> <b style="color:#333">Press down to learn more</b>
 						</p>
@@ -363,7 +295,7 @@
 						<div class="header_title">04</div>
 					</div>
 					<h4>Line Graph</h4>
-					<p class="text-small"> A line graph will work for most time series data and are used to visualise a single value that changes at regular intervals. Line graphs visualise trends and as a result the y-axis does not necessarily need to start at zero. Adding visual markers for important events, e.g. when stay at home orders went into effect, is an easy way to add context.
+					<p class="text-small"> A line graph will emphasise trends by showing a series of points connected by straight lines. Adding visual markers for important events, e.g. when stay at home orders went into effect, is an easy way to add context. Multiple times series should always use line graphs.
 					<div class="img-standard">
                         <img src="pics/covid19_line.png" alt="line graph" />
                         <p class="image-text">Source: Our World in Data
@@ -376,11 +308,11 @@
 						<div class="header_title">04</div>
 					</div>
 					<h4>Bar Chart</h4>
-					<p class="text-small">Bar charts for time series work best when you want to make distinct points in time easy to recognize such as days, months or years, e.g. the number of confirmed cases reported daily. Because bar charts visualise the value at each point in time (rather than the trend, the y-axis should start at 0. 
+					<p class="text-small">Time series bar charts are used to emphasise individual values at distinct points in time. They work best when data points are at equal intervals such as days, months or years, e.g. the number of confirmed cases reported daily. Always make sure that your y-axis starts at zero. 
 					</p>
 					<div class="img-standard">
                         <img src="pics/covid19_bar.png" alt="bar chart"/>
-                        <p class="image-text">Source: Worldometer 
+                        <p class="image-text">Source:<a href="https://www.worldometers.info/coronavirus/" target="_blank"> Worldometer </a>
 						</br> <b style="color:#333"> Press down to see more examples</b>
 						</p>
                     </div>
@@ -393,21 +325,21 @@
 					<p class="text-small"> Stacked area graphs are useful for comparing multiple data series changing over time. The values of each series are displayed on top of each other, which allows you to visualise the change of the total value, e.g. the number of confirmed COVID-19 cases globally, and how the values are evolving in component groups, e.g. region.
 					</p>
 					<div class="img-standard">
-                        <img src="pics/stacked_region.png" alt="area chart" />
-                        <p class="image-text">Source: Our World in Data</p>
+						<img src="pics/stacked_region.png" alt="area chart" />
+						<p class="image-text">Source:<a href="https://ourworldindata.org/grapher/daily-cases-covid-region" target="_blank"> Source: Our World in Data </a>
                     </div>
 				</section>
 			</section> 
 			<section>
-				<section id="magnitude" data-menu-title="Magnitude & Ranking">
+				<section id="comparison" data-menu-title="Comparison">
                		<div class="header_bar centrered">
                     	<div class="header_title">04</div>
 					</div>
-					<h4>Magnitude & Ranking</h4>
+					<h4>Comparison</h4>
 					<p class="text-small"> Visualisations will often use size, length and position to help viewers explore differences and similarities between categories and data series.
 					</p>
 					<div class="img-standard">
-                        <img src="pics/mag_rank_centrev.png" alt="mag_ranking"/>
+                        <img src="pics/comparison.png" alt="mag_ranking"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
 						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
@@ -418,11 +350,26 @@
 						<div class="header_title">04</div>
 					</div>
 					<h4>Ordered Bar Chart</h4>
-					<p class="text-small"> Ordered bar and column charts are excellent for showing position and for comparing, e.g., a list of COVID-19 cases by country. Fun fact: a 'bar chart' with vertical bars is called a column chart.
+					<p class="text-small"> Ordered bar and column charts are excellent for showing position and comparing across categories. When your labels are long, horizontal bars should be used. It is always preferable to sort your data as this will make it easier to read.
 					</p>
 					<div class="img-standard">
-                        <img src="pics/full-list-total-tests-for-covid-19.png" alt="ranking bar graph" />
-                        <p class="image-text">Source: <a href="https://data.humdata.org/dataset/total-covid-19-tests-performed-by-country" target="_blank">Our World in Data on HDX</a> </p>
+                        <img src="pics/bar_hrp2.png" alt="ranking bar graph" />
+						<p class="image-text"> Created by Centre for Humanitarian Data</a> 
+						</br> <b style="color:#333"> Press down for more examples </b>
+						</p>
+                    </div>
+				</section>
+				<section id="grouped_bar" data-menu-title="Paired Bar Chart">
+					<div class="header_bar centrered">
+						<div class="header_title">04</div>
+					</div>
+					<h4>Grouped Bar Chart</h4>
+					<p class="text-small"> 
+					</p>
+					<div class="img-standard">
+                        <img src="pics/covid_groupbar.png" alt="Group Bar" />
+						<p class="image-text">Source: Centre for Humanitarian Data</a> 
+						</p>
                     </div>
 				</section>
 			</section> 
@@ -435,7 +382,7 @@
 					<p class="text-small"> Distribution visualisations are often used to explore data as they show the values in the dataset and how often they occur. The shape (or the skew) of a distribution can be a memorable way of highlighting the lack of uniformity or equality in the data.
 					</p>
 					<div class="img-standard">
-                        <img src="pics/distribution_centerv.png" alt="distribution"/>
+                        <img src="pics/distribution_two_box.png" alt="distribution"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
 						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
@@ -448,9 +395,23 @@
 					<h4>Histogram</h4>
 					<p class="text-small"> Histograms are useful for understanding the spread of the data. They show where values are concentrated, what the extremes are and whether there are any gaps . They may look similar to a vertical bar chart but are different in an important way. The horizontal (x) axis is numerical, not categorical.
 					</p>
-					<div class="img-sq">
+					<div class="img-sm">
                         <img src="pics/histogram.png" alt="histogramgraph"/>
-						<p class="image-text">Source: <a href="https://link.springer.com/article/10.1007/s00134-020-05991-x/figures/1" target="_blank">Springer</a> </p>
+						<p class="image-text">Source: <a href="https://link.springer.com/article/10.1007/s00134-020-05991-x/figures/1" target="_blank">Springer</a> 
+						</br> <b style="color:#333"> Press down for more examples </b>
+						</p>
+                    </div>
+				</section>
+				<section id="boxplot" data-menu-title="Box Plot">
+					<div class="header_bar centrered">
+						<div class="header_title">04</div>
+					</div>
+					<h4>Box Plot</h4>
+					<p class="text-small"> Box Plots (as referred to as box and whisker plots) are popular among statisticians and researchers. They are helpful for summarising multiple distributions by showing the median (centre) and range of the data. While useful for exploring data, not everyone understands how to interpret box plots. Uses  sparingly as an explanatory tool.
+					</p>
+					<div class="img-sm">
+                        <img src="pics/boxplot_income.png" alt="boxplot"/>
+						<p class="image-text">Source: Created by the Centre for Humanitarian Data</p>
                     </div>
 				</section>
 			</section> 
@@ -463,7 +424,7 @@
 					<p class="text-small"> These charts are useful for showing how various parts of the data comprise the whole. While useful with a small number of categories they can quickly become difficult to read. If you are mainly interested in comparing the size of the parts, often a simple bar chart will be easier to read. 
 					</p>
 					<div class="img-standard">
-                        <img src="pics/part_whole_centrev.png" alt="part_whole" />
+                        <img src="pics/part_two.png" alt="part_whole" />
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
 						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
@@ -505,7 +466,7 @@
 					<p class="text-small">Use only when precise locations or geographical patterns in data are a crucial part of your message. When the interesting patterns in your data are not geographic patterns a map may end up distracting from your message. Just because it can be mapped, does not mean it must be mapped. 
 					</p>
 					<div class="img-standard">
-                        <img src="pics/geospatial_centrev.png" alt="geopatial"/>
+                        <img src="pics/geospatial.png" alt="geopatial"/>
 						<p class="image-text"> Source <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
 						</br> <b style="color:#333"> Press down to learn more </b>
 						</p>
@@ -523,8 +484,148 @@
                         <p class="image-text">Source: <a href="https://www.humanitarianresponse.info/sites/www.humanitarianresponse.info/files/documents/files/global_humanitarian_response_plan_covid-19.pdf" target="_blank">GLOBAL HUMANITARIAN RESPONSE PLAN COVID-19</a></p>
                     </div>
 				</section>
+				<section id="proportional_symbol" data-menu-title="Proportional Symbol Map">
+					<div class="header_bar centrered">
+						<div class="header_title">04</div>
+					</div>
+					<h4>Proportional Symbol Map</h4>
+					<p class="text-small"> Proportional symbol maps scale the size of simple symbols proportionally to the data value found at that location. The larger the symbol, the “more” of something exists at a location. 
+					</p>
+					<div class="img-standard">
+                        <iframe title="COVID-19 Pandemic in Locations with a Humanitarian Response Plan" aria-label="Map" id="datawrapper-chart-LyNrW" src="https://datawrapper.dwcdn.net/LyNrW/3/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
+                    </div>
+				</section>
 			</section> 
-		<!-- SECTION 5 Do it Yourself -->
+		<!-- SECTION 3 Best Practice -->
+		<section id="designing_thoughtfully" data-background="#1bb580ff" data-menu-title="Designing Thoughtfully">
+			<div class="title_container">
+				<h1 class="white">Designing Thoughtfully</h1>
+			</div>
+		</section>
+		<section id="thoughtful_viz" data-menu-title="Design Considerations">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Design Considerations for Thoughtful Visualisations</h4>
+			<p class="text-small">The way we communicate about the COVID-19 pandemic has the potential to shape our audience's perception of risk and safety. 
+			</p>
+			<p class="text-small">The design choices we make influence how our audience interprets our underlying data. This is because through our design we choose to emphasise certain aspects of the data while potentially obscuring others. While there are no hard and fast rules for making design choices, the following are a few considerations to think about when creating COVID-19 data visualisations.
+			</p>
+		</section>
+		<section id="thoughtful_colours" data-menu-title="Choosing Colours">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Consider the Connotations of Colours</h4>
+			<p class="text-small">Red is a color that grabs a reader’s attention and is often used to alert and highlight. A map full of overlapping red circles may communicate alarm and, as a result, may distract from other messages. Consider the connotation of colours when creating COVID-19 visualisations.
+			</p>
+			<div class="img-standard">
+				<img src="pics/who_map.png" alt="colour map"  />
+				<p class="image-text"> Source <a href="https://covid19.who.int/" target="_blank">World Health Organisation Dashboard</a> 
+				</p>
+			</div>
+		</section>
+		<section>
+			<section id="thoughtful_log" data-menu-title="Using a Logarithmic Scale">
+				<div class="header_bar centregreen">
+					<div class="header_title">03</div>
+				</div>
+				<h4>Consider Using a Logarithmic Scale</h4>
+				<p class="text-small">Plotting exponential growth on a linear scale can obscure important details such as the rate of growth. In the example below, the U.S. and Italy look like they are on similar trajectories on the linear scale whereas it is more apparent on the logarithmic scale that COVID-19 cases are continuing to grow in the U.S. while Italy is seeing a slowdown.
+				</p>
+				<div class="img-standard">
+					<img src="pics/linear_log.png" alt="log" />
+					<p class="image-text"> Source: <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a>
+					</br> <b style="color:#333">Press down to learn more</b>
+					</p>
+				</div>
+			</section>
+			<section id="thoughtful_log_about" data-menu-title="About the Logarithmic Scale">
+				<div class="header_bar centregreen">
+					<div class="header_title">03</div>
+				</div>
+				<h4>Linear and Logarithmic Scales</h4>
+				<p class="text-small">The most common form of a line graph uses a linear scale. Along the Y axis, the numbers progress in a linear form – 1, 2, 3, or 10, 20, 30, etc.
+				</p>
+				<p class="text-small">On a logarithmic scale, numbers on the Y-axis don’t increase in equal increments. Each interval increases by a set factor – often 10 but could be a factor of 3 or 350 or 3,500, etc.
+				</p>
+				<p class="text-small">A logarithmic scale prevents large numbers from skewing a whole graph and is good for measuring rates of change, particularly rates of growth (e.g. number of cases, deaths, etc. over time). If an epidemic is growing exponentially, it arguably makes sense to plot it this way because the trend line can “keep up” with the numbers instead of shooting off into the stratosphere. Read more about logarithmic scales at <a href="https://theconversation.com/the-bar-necessities-5-ways-to-understand-coronavirus-graphs-135537" target="_blank">the conversation.</a>
+				</p>
+			</section>
+		</section>
+		<section>
+		<section id="thoughtful_relative_absolute" data-menu-title="Relative & Absolute">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Know the Difference between Relative and Absolute Values</h4>
+			<p class="text-small long-para"> With the message you want to convey in mind, explore different ways to represent the data you are visualising. When comparing across countries or regions, consider how your visualisation will change based on your choice to use absolute numbers (total # of confirmed cases) versus relative numbers (# of confirmed cases per X thousand people).  
+			</p>
+			<p class="text-small long-para">In their purest sense an absolute value is a value compared to nothing, and a relative value is created when two absolute values are compared to each other. Relative values are often presented as percentages, proportions, rates, etc., and are good for providing a reference for readers to judge magnitude and to compare magnitude across different categories. 
+			</p>
+			<p class="text-small long-para">The choice to use one or the other depends on the message you are trying to convey. 				
+			</p>
+			<p class="text-bottom"> Press down for examples</p> 
+		</section>
+		<section id="responsible_relative" data-menu-title="Relative Values">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Using Relative COVID-19 Numbers</h4>
+			<p class="text-small">The  choropleth map is an example of a visualisation that works best with relative numbers because they provide a common reference to compare magnitude across countries or regions.
+			</p>
+			<div class="img-standard">
+				<img src="pics/relative_map.png" alt="log" />
+				<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a> 
+				</br> <b style="color:#333">Press down to learn more</b>
+				</p>
+
+			</div>
+		</section>
+		<section id="thoughtful_absolute" data-menu-title="Absolute Values">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Using Absolute COVID-19 Numbers</h4>
+			<p class="text-small">COVID-19 logarithmic line graphs often use absolute numbers, why? The emphasis when using a logarithmic scale is the exponential change over time, or trajectory, rather than the magnitude. 
+			</p>
+			<div class="img-standard">
+				<img src="pics/absolute_log_ft.png" alt="log"  />
+				<p class="image-text"> Source <a href="https://www.ft.com/coronavirus-latest" target="_blank">John Burn-Murdoch at the Financial Times</a> 
+				</p>
+			</div>
+		</section>
+		</section>
+	<section>
+		<section id="thoughtful_uncertainty" data-menu-title="Communicate Uncertainty">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Communicate Uncertainty</h4>
+			<p class="text-small">There is a great deal of uncertainty around COVID-19, and this is present in the data. Try to find ways to convey that uncertainty in your visualisation. For example, adding the simple phrase ‘we know of X cases’ helps convey the critical message that the data we have is incomplete.
+			</p>
+			<div class="img-standard">
+				<img src="pics/weknowof_map.png" alt="weknowof" />
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+				</br> <b>Press down to learn more</b>
+				</p>
+			</div>
+		</section>
+		<section id="thoughtful_uncertainty_date" data-menu-title="Communicate the Date & Sources">
+			<div class="header_bar centregreen">
+				<div class="header_title">03</div>
+			</div>
+			<h4>Communicate the Date & Source Clearly</h4>
+			<p class="text-small"> With the velocity of changes in the COVID pandemic, providing readers information on the date that data pertains to and the frequency of updates helps them understand how current a visualisation is.
+			</p>
+			<div class="img-standard">
+				<img src="pics/date_source.png" alt="date_source" />
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+				</p>
+			</div>
+		</section>
+	</section>
+			<!-- SECTION 5 Do it Yourself -->
 				<section id="do_it_yourself" data-background="#007ce0" data-menu-title="Create Your Own Visualisation">
                     <div class="title_container">
                         <h1 class="white">Create your own Visualisation</h1>
