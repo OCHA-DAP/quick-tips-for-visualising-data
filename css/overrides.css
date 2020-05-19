@@ -48,6 +48,9 @@ body,
 .reveal a {
 	color: #007CE1;
 }
+.reveal a:hover {
+	color: #007CE1;
+}
 
 .white a {
 	color: #FFF;
@@ -100,18 +103,18 @@ section.has-light-background {
 
 .slide-menu-button a,
 .slide-menu-button a:hover {
-	color: #007CE1;
+	color: #007CE1 ;
 }
 
-.reveal.has-light-background .slide-menu-button a,
-.slide-menu-button a:hover {
+.reveal.has-light-background .slide-menu-button a {
 	color: #FFF
 }
 
-.reveal.has-dark-background .slide-menu-button a,
-.slide-menu-button a:hover {
+.reveal.has-dark-background .slide-menu-button a {
 	color: #FFF
 }
+
+/* Custom CSS for Slide numbers, removed. 
 
 .reveal .slide-number a {
 	color: #007ce1; }
@@ -121,7 +124,7 @@ section.has-light-background {
 	
 .reveal.has-dark-background .slide-number a {
 	color: #FFF;
-	}
+	} */
 
 
 	/* Fonts & Layout for mobile */
