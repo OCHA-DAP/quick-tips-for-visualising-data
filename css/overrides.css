@@ -189,5 +189,28 @@ section.has-light-background {
 	.reveal .sm-mobile {
 		font-size: 15px !important;
 	}
+	.reveal .controls .controls-arrow:before,
+	.reveal .controls .controls-arrow:after {
+		width: 2em;
+	}
+	.reveal .controls .navigate-left {
+		right: 4em;
+		bottom: 2em;
+	}
+	.reveal .controls .navigate-right {
+		right: 0;
+		bottom: 2em;
+	}
+	.reveal .controls .navigate-up {
+		right: 2em;
+		bottom: 4em;
+	}
+	.reveal .controls .navigate-down {
+		right: 2em;
+		bottom: -1.4em;
+	}
+	.reveal .header-sm-mobile {
+		font-size: .7em !important;
+	}
 
 }
