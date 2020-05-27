@@ -27,6 +27,22 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script type="text/javascript">
+		(function (c, a) {
+				if (!a.__SV) {
+					var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
+						function c(b, i) {
+							var a = i.split("."); 2 == a.length && (b = b[a[0]], i = a[1]); b[i] = function () {
+								b.push([i].concat(Array.prototype.slice.call(arguments,
+									0)))
+							}
+						} var e = a; "undefined" !== typeof g ? e = a[g] = [] : g = "mixpanel"; e.people = e.people || []; e.toString = function (b) { var a = "mixpanel"; "mixpanel" !== g && (a += "." + g); b || (a += " (stub)"); return a }; e.people.toString = function () { return e.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+						for (h = 0; h < l.length; h++)c(e, l[h]); var f = "set set_once union unset remove delete".split(" "); e.get_group = function () { function a(c) { b[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); e.push([d, call2]) } } for (var b = {}, d = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < f.length; c++)a(f[c]); return b }; a._i.push([b, d, g])
+					}; a.__SV = 1.2; b = c.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+						MIXPANEL_CUSTOM_LIB_URL : "file:" === c.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"; d = c.getElementsByTagName("script")[0]; d.parentNode.insertBefore(b, d)
+				}
+			})(document, window.mixpanel || []);
+		</script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -68,22 +84,22 @@
 					</p>
 					<p class="text-small-centre">
                         <a class="contents_link" href="#/undertstand_context">02: Understand the Data</a>
-					</p>  
+					</p>
 					<p class="text-small-centre">
                         <a class="contents_link" href="#/chart_choices"> 03: Choose the Right Visualisation</a>
-                    </p> 
+                    </p>
                     <p class="text-small-centre">
                         <a class="contents_link" href="#/designing_thoughtfully">04: Designing Thoughtfully</a>
-                    </p>                                        
+                    </p>
                     <p class="text-small-centre">
                         <a class="contents_link" href="#/do_it_yourself">05: Create Your Own Visualisation</a>
-					</p>     
+					</p>
 					<p class="text-small-centre">
                         <a class="contents_link" href="#/quiz">06: Test Your Knowledge</a>
-					</p>    
+					</p>
 					<p class="text-small-centre">
                         <a class="contents_link" href="#/annex">Annex</a>
-					</p>                                                     
+					</p>
 				</section>
 			<section>
 				<section id="instructions" data-menu-title="Instructions">
@@ -96,13 +112,13 @@
 					</p>
 					<p class="text-small"> On certain pages, there is the option to scroll down to learn more about a particular topic. Navigate to these vertical pages using the down arrow on your keyboard or by clicking on the down arrow at the bottom right of your screen.
 					</p>
-					<p class="text-bottom"> Press down to learn more about navigating the session.</p> 
+					<p class="text-bottom"> Press down to learn more about navigating the session.</p>
 				</section>
 				<section id="instructions_cont.">
                     <div class="header_bar centregreen">
                         <div class="header_title header-sm-mobile">How to Navigate the Session</div>
 					</div>
-					<p class="text-small"> The navigation arrows at the bottom right of your screen are there to lead you through the session. In the example below, the left faded arrow indicates completed pages whereas both the down arrow and right arrow indicate pages you have yet to visit. 
+					<p class="text-small"> The navigation arrows at the bottom right of your screen are there to lead you through the session. In the example below, the left faded arrow indicates completed pages whereas both the down arrow and right arrow indicate pages you have yet to visit.
 					</p>
 					<div class="img-standard">
 						<img src="pics/nav_arrows.png" alt="nav_arrows" class="no_shadow"/>
@@ -125,25 +141,25 @@
                     <p class="text-small"> We visualise data <b>to explore</b> it. Through exploratory data visualisation, we are able to uncover different relationships and to discover the most meaningful information to highlight or analyse further.
 					</p>
 					<p class="text-small"> We also visualise data <b>to explain</b> what we are seeing in it. Explanatory visualisation can be used to inform, persuade and engage an audience. This is the type of visualisation we are going to focus on here.
-					</p> 
+					</p>
 					<div class="img-med">
 						<img src="pics/explore_explain.png" alt="explain-v-explore" class="no_shadow"/>
-						<p class="image-text"> Image inspired by <a href="https://slides.com/maartenzam/boehringer-1#/5/14/0" target="_blank">Maarten Lambrechts</a> 
+						<p class="image-text"> Image inspired by <a href="https://slides.com/maartenzam/boehringer-1#/5/14/0" target="_blank">Maarten Lambrechts</a>
 						</p>
 					</div>
-				</section> 
+				</section>
 				<section id="to_explain_how" data-menu-title="Explain with Visualisation" >
 					<div class="header_bar centreblue">
 						<div class="header_title">01</div>
 					</div>
 					<h4>How to Explain with Visualisation</h4>
-					<p class="text-small"> Explanatory data visualisation requires a defined audience and clear objective. Before you start to create your visualisation, ask yourself the following: 
+					<p class="text-small"> Explanatory data visualisation requires a defined audience and clear objective. Before you start to create your visualisation, ask yourself the following:
 						<ul class="text-small">
 							<li><b>What am I trying to say?</b> The message that you are trying to convey should guide the design choices that you make.</li>
 							<li><b>Who am I trying to say it to?</b> Thinking about who your audience is and how they will interact with and use your visualisation will help focus your final product.</li>
 						</ul>
 					</p>
-				</section> 
+				</section>
 		<!-- SECTION 2 Context -->
 			<section id="undertstand_data" data-background="#f2645a" data-menu-title="Understand the Data">
 				<div class="title_container">
@@ -156,7 +172,7 @@
 					<div class="header_title">02</div>
 				</div>
 				<h4>Before you start, get to know your data</h4>
-				<p class="text-small">Before digging into a COVID-19 dataset, it is important to spend a bit of time understanding what can and cannot be said based on the data. Too often we jump into analysis before taking the time to understand what aspects of the world our data represents. 
+				<p class="text-small">Before digging into a COVID-19 dataset, it is important to spend a bit of time understanding what can and cannot be said based on the data. Too often we jump into analysis before taking the time to understand what aspects of the world our data represents.
 				</p>
 				<p class="text-small">The first step is to understand the definitions of the data included in your dataset. To do this, you’ll want to review the following:
 					<ol class="text-small">
@@ -164,7 +180,7 @@
 						<li>the <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="A data dictionary is used to catalog and communicate the structure and content of data, and provides meaningful descriptions for individually named data objects." data-balloon-pos="up">data dictionary</span></li>
 					</ol>
 				</p>
-				<p class="text-bottom"> Press down to learn more about metadata and data dictionaries.</p> 
+				<p class="text-bottom"> Press down to learn more about metadata and data dictionaries.</p>
 			</section>
 			<section id="context_metadata" data-menu-title="Metadata">
 				<div class="header_bar centrered">
@@ -184,7 +200,7 @@
 				<p class="text-bottom"> Press down to learn more about data dictionaries.</p>
 				<!-- <div class="img-standard">
 					<img src="pics/hdx_metadata.png" alt="colour map" />
-					<p class="image-text"> Click here to read more about <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">HDX Metadata</a> 
+					<p class="image-text"> Click here to read more about <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">HDX Metadata</a>
 					</br> <b style="color:#333">Press down to learn about data dictionaries</b>
 					</p>
 				</div> -->
@@ -198,7 +214,7 @@
 				<p class="text-small"> A data dictionary provides definitions for variables in a data set to understand what each variable represents. The example below provides an example of definition given for positive and suspected patients as well as the data type (numeric).</p>
 				<div class="img-standard">
 					<img src="pics/data_dictionaryv3.png" alt="data dictionary" />
-					<p class="image-text"> Source: <a href="https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics" target="_blank">Healthcare.gov Data Portal</a> 
+					<p class="image-text"> Source: <a href="https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics" target="_blank">Healthcare.gov Data Portal</a>
 					</p>
 				</div>
 			</section>
@@ -208,15 +224,15 @@
 					<div class="header_title">02</div>
 				</div>
 				<h4>Common COVID-19 Data Points</h4>
-				<p class="text-small sm-mobile"> The following are a few common figures in COVID-19 datasets: 
+				<p class="text-small sm-mobile"> The following are a few common figures in COVID-19 datasets:
 				</p>
-				<p class="text-small sm-mobile"> 
+				<p class="text-small sm-mobile">
 					<ol class="text-small sm-mobile">
 						<li><b>New Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe.  (Also known as “<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="The number of new cases of a health event (such as development of a disease, or reaction to a medicine) that occur during a specific time period, usually a year, in a specified population. Incidence is therefore also a measure of the risk of experiencing the health event during a certain period of time." data-balloon-pos="up">incidence</span>").</li>
 						<li><b>Cumulative Cases</b> are the total confirmed cases up to a given point in time, without subtracting people who have recovered or died. These numbers over time only get larger and larger as new cases are added.</li>
 						<li><b>Deaths</b> are the number of confirmed deaths (and probable where that is available) for a given timeframe. The case fatality ratio is the number of deaths divided by the  number of confirmed cases.</li>
 						<li><b>Active Cases</b> includes the number of confirmed cases (and suspected cases where that is available) for a given timeframe minus those people who have died or recovered from COVID-19. (Also known as "<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Prevalence is the proportion of a population found to have a condition (typically a disease or a risk factor such as smoking). Prevalence can be measured at a particular point in time (point prevalence), or over a specified period such as a year (period prevalence)." data-balloon-pos="up">prevalence</span>"). </li>
-					</ol> 
+					</ol>
 				</p>
 			</section>
 		<section>
@@ -225,15 +241,15 @@
 					<div class="header_title">02</div>
 				</div>
 				<h4>Data Reliability</h4>
-				<p class="text-small sm-mobile"> The accuracy of these numbers is dependent on a number of factors. 
+				<p class="text-small sm-mobile"> The accuracy of these numbers is dependent on a number of factors.
 					<ul class="text-small sm-mobile">
-						<li>The number of confirmed cases depends on the extent of testing being performed in a country, the accuracy of the tests, and the lag time between when a person is infected, symptomatic and tested.</li> 
+						<li>The number of confirmed cases depends on the extent of testing being performed in a country, the accuracy of the tests, and the lag time between when a person is infected, symptomatic and tested.</li>
 						<li>The number of deaths depends on if deaths outside of hospitals are counted and if tests are being performed within hospitals prior to or after death. </li>
 						<li>The number of active cases is calculated using data on recovered cases. Not all locations are providing proper data on recovered cases and as a result this data may not be reliable. </li>
 					</ul>
 				</p>
 				<p class="text-small">To ensure that the data you have is as up-to-date and accurate as possible, prioritise data from reputable sources and data with well documented collection methodologies.</p>
-				<p class="text-bottom"> Press down to learn more about reliable data sources</p> 
+				<p class="text-bottom"> Press down to learn more about reliable data sources</p>
 			</section>
 			<section id="sources" data-menu-title="Data Sources">
 				<div class="header_bar centrered">
@@ -284,7 +300,7 @@
 					</p>
 					<div class="img-standard">
                         <img src="pics/change.png" alt="change_over_time"/>
-						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a>
 						</br> <b style="color:#333">Press down to learn more.</b>
 						</p>
                     </div>
@@ -307,7 +323,7 @@
 						<div class="header_title">03</div>
 					</div>
 					<h4>Bar Chart</h4>
-					<p class="text-small">Time series bar charts are used to emphasise individual values at distinct points in time. They work best when data points are at equal intervals such as days, months or years, e.g. the number of confirmed cases reported daily. Always make sure your Y axis starts at zero. 
+					<p class="text-small">Time series bar charts are used to emphasise individual values at distinct points in time. They work best when data points are at equal intervals such as days, months or years, e.g. the number of confirmed cases reported daily. Always make sure your Y axis starts at zero.
 					</p>
 					<div class="img-standard">
                         <img src="pics/covid19_bar.png" alt="bar chart"/>
@@ -328,7 +344,7 @@
 						<p class="image-text">Source:<a href="https://ourworldindata.org/grapher/daily-cases-covid-region" target="_blank"> Our World in Data </a>
                     </div>
 				</section>
-			</section> 
+			</section>
 			<section>
 				<section id="comparison" data-menu-title="Comparison">
                		<div class="header_bar centrered">
@@ -339,7 +355,7 @@
 					</p>
 					<div class="img-standard">
                         <img src="pics/comparison_v2.png" alt="mag_ranking"/>
-						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a>
 						</br> <b style="color:#333"> Press down to learn more. </b>
 						</p>
                     </div>
@@ -362,14 +378,14 @@
 						<div class="header_title">03</div>
 					</div>
 					<h4>Proportional Symbol Chart</h4>
-					<p class="text-small"> Often called bubble charts, these charts are typically used to compare and show the relationships between categorised circles using both positioning, colours and proportions. 
+					<p class="text-small"> Often called bubble charts, these charts are typically used to compare and show the relationships between categorised circles using both positioning, colours and proportions.
 					</p>
 					<div class="img-standard">
 						<iframe title="COVID-19 Pandemic in Locations with a Humanitarian Response Plan" aria-label="chart" id="datawrapper-chart-ikRlr" src="https://datawrapper.dwcdn.net/ikRlr/11/" scrolling="no" frameborder="0" style="border: none;" width="600" height="307"></iframe>
 						<p class="image-text">Chart by OCHA Centre for Humanitarian Data</p>
                     </div>
 				</section>
-			</section> 
+			</section>
 			<section>
 				<section id="distribution" data-menu-title="Distribution">
                		 <div class="header_bar centrered">
@@ -380,7 +396,7 @@
 					</p>
 					<div class="img-standard">
                         <img src="pics/distribution_two_box.png" alt="distribution"/>
-						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a>
 						</br> <b style="color:#333"> Press down to learn more. </b>
 						</p>
                     </div>
@@ -394,7 +410,7 @@
 					</p>
 					<div class="img-sm">
                         <img src="pics/histogram.png" alt="histogramgraph"/>
-						<p class="image-text">Source: <a href="https://link.springer.com/article/10.1007/s00134-020-05991-x/figures/1" target="_blank">Springer</a> 
+						<p class="image-text">Source: <a href="https://link.springer.com/article/10.1007/s00134-020-05991-x/figures/1" target="_blank">Springer</a>
 						</br> <b style="color:#333"> Press down for more examples. </b>
 						</p>
                     </div>
@@ -411,18 +427,18 @@
 						<p class="image-text">Source: OCHA Centre for Humanitarian Data</p>
                     </div>
 				</section>
-			</section> 
+			</section>
 			<section>
 				<section id="part_whole" data-menu-title="Part-to-Whole">
                		 <div class="header_bar centrered">
                     	<div class="header_title">03</div>
 					</div>
 					<h4>Part-To-Whole</h4>
-					<p class="text-small"> These charts are useful for showing how various parts of the data comprise the whole. While useful with a small number of categories they can quickly become difficult to read. If you are mainly interested in comparing the size of the parts, often a simple bar chart will be easier to read. 
+					<p class="text-small"> These charts are useful for showing how various parts of the data comprise the whole. While useful with a small number of categories they can quickly become difficult to read. If you are mainly interested in comparing the size of the parts, often a simple bar chart will be easier to read.
 					</p>
 					<div class="img-standard">
                         <img src="pics/part_two.png" alt="part_whole" />
-						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a>
 						</br> <b style="color:#333"> Press down to learn more. </b>
 						</p>
                     </div>
@@ -445,12 +461,12 @@
 					<div class="header_bar centrered" >
 						<div class="header_title">03</div>
 					</div>
-					<h4>Proportional Stacked Bar</h4> 
+					<h4>Proportional Stacked Bar</h4>
 					<p class="text-small">The proportional stacked bar is another simple way of showing a part-to-whole relationship. This chart is especially good when comparing variables across groups or at different points in time.
 					</p>
 					<div class="img-standard">
 						<img src="pics/stacked_home.png" alt="stacked bar graph" />
-                        <p class="image-text">Source: <a href="https://public.tableau.com/profile/eleonora.nazander#!/vizhome/Workingforhome/Dashboard1" target="_blank">Eleonora Nazander</a> 
+                        <p class="image-text">Source: <a href="https://public.tableau.com/profile/eleonora.nazander#!/vizhome/Workingforhome/Dashboard1" target="_blank">Eleonora Nazander</a>
                     </div>
 				</section>
 			</section>
@@ -460,11 +476,11 @@
                     	<div class="header_title">03</div>
 					</div>
 					<h4>Geospatial</h4>
-					<p class="text-small">Only use maps when precise locations or geographical patterns in data are a crucial part of your message. When the interesting patterns in your data are not geographic patterns, a map may end up distracting from your message. Just because it can be mapped, does not mean it must be mapped. 
+					<p class="text-small">Only use maps when precise locations or geographical patterns in data are a crucial part of your message. When the interesting patterns in your data are not geographic patterns, a map may end up distracting from your message. Just because it can be mapped, does not mean it must be mapped.
 					</p>
 					<div class="img-standard">
                         <img src="pics/geospatial.png" alt="geopatial"/>
-						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a> 
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel & The Financial Times</a>
 						</br> <b style="color:#333"> Press down to learn more. </b>
 						</p>
                     </div>
@@ -494,7 +510,7 @@
                         <iframe title="COVID-19 Pandemic in Locations with a Humanitarian Response Plan" aria-label="Map" id="datawrapper-chart-LyNrW" src="https://datawrapper.dwcdn.net/LyNrW/5/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
                     </div>
 				</section>
-			</section> 
+			</section>
 			<section id="chart_gif" data-menu-title="Visualisation & Chart Choosers">
 				<div class="header_bar centrered">
 					<div class="header_title">03</div>
@@ -522,7 +538,7 @@
 				<div class="header_title">04</div>
 			</div>
 			<h4>Design Considerations for THOUGHTFUL VISUALISATIONS</h4>
-			<p class="text-small">The way we communicate about the COVID-19 pandemic has the potential to shape our audience's perception of risk and safety. 
+			<p class="text-small">The way we communicate about the COVID-19 pandemic has the potential to shape our audience's perception of risk and safety.
 			</p>
 			<p class="text-small">The design choices we make influence how our audience interprets our underlying data. This is because through our design we choose to emphasise certain aspects of the data while potentially obscuring others. While there are no hard and fast rules for making design choices, the following are a few considerations to think about when creating COVID-19 data visualisations.
 			</p>
@@ -576,11 +592,11 @@
 			<h4>Know the Difference between Relative and Absolute Values</h4>
 			<p class="text-small long-para"> With the message you want to convey in mind, explore different ways to represent the data you are visualising. When comparing across countries or regions, consider how your visualisation will change based on your choice to use absolute numbers (total number of confirmed cases) versus relative numbers (number of confirmed cases per X thousand people).
 			</p>
-			<p class="text-small long-para">In their purest sense, an absolute value is a value compared to nothing, and a relative value is created when two absolute values are compared to each other. Relative values are often presented as percentages, proportions, rates, etc., and are good for providing a reference for readers to judge magnitude and to compare magnitude across different categories. 
+			<p class="text-small long-para">In their purest sense, an absolute value is a value compared to nothing, and a relative value is created when two absolute values are compared to each other. Relative values are often presented as percentages, proportions, rates, etc., and are good for providing a reference for readers to judge magnitude and to compare magnitude across different categories.
 			</p>
-			<p class="text-small long-para">The choice to use one or the other depends on the message you are trying to convey. 				
+			<p class="text-small long-para">The choice to use one or the other depends on the message you are trying to convey.
 			</p>
-			<p class="text-bottom"> Press down for examples.</p> 
+			<p class="text-bottom"> Press down for examples.</p>
 		</section>
 		<section id="responsible_relative" data-menu-title="Relative Values">
 			<div class="header_bar centregreen">
@@ -591,7 +607,7 @@
 			</p>
 			<div class="img-standard">
 				<img src="pics/relative_map.png" alt="log" />
-				<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a> 
+				<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a>
 				</br> <b style="color:#333">Press down to learn more.</b>
 				</p>
 
@@ -602,11 +618,11 @@
 				<div class="header_title">04</div>
 			</div>
 			<h4>Using Absolute COVID-19 Numbers</h4>
-			<p class="text-small">COVID-19 logarithmic line graphs often use absolute numbers, why? The emphasis when using a logarithmic scale is the exponential change over time, or trajectory, rather than the magnitude. 
+			<p class="text-small">COVID-19 logarithmic line graphs often use absolute numbers, why? The emphasis when using a logarithmic scale is the exponential change over time, or trajectory, rather than the magnitude.
 			</p>
 			<div class="img-standard">
 				<img src="pics/absolute_log_ft.png" alt="log"  />
-				<p class="image-text"> Source: <a href="https://www.ft.com/coronavirus-latest" target="_blank">John Burn-Murdoch at the Financial Times</a> 
+				<p class="image-text"> Source: <a href="https://www.ft.com/coronavirus-latest" target="_blank">John Burn-Murdoch at the Financial Times</a>
 				</p>
 			</div>
 		</section>
@@ -621,7 +637,7 @@
 			</p>
 			<div class="img-standard">
 				<img src="pics/weknowof_map.png" alt="weknowof" />
-				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a>
 				</br> <b>Press down to learn more</b>
 				</p>
 			</div>
@@ -635,7 +651,7 @@
 			</p>
 			<div class="img-standard">
 				<img src="pics/date_source.png" alt="date_source" />
-				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a> 
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a>
 				</p>
 			</div>
 		</section>
@@ -645,11 +661,11 @@
 				<div class="header_title">04</div>
 			</div>
 			<h4>Get to the Point</h4>
-			<p class="text-small">Sometimes charts get in the way of the message you are trying to convey. Consider if  it is best to present a simple visual  number(s) that you want to emphasise, to get to the point. 
+			<p class="text-small">Sometimes charts get in the way of the message you are trying to convey. Consider if  it is best to present a simple visual  number(s) that you want to emphasise, to get to the point.
 			</p>
 			<div class="img-standard">
 				<img src="pics/get_to_point.png" alt="1Number"  />
-				<p class="image-text"> Source: <a href="https://www.vox.com/science-and-health/2020/3/18/21184992/coronavirus-covid-19-flu-comparison-chart" target="_blank">Vox.com</a> 
+				<p class="image-text"> Source: <a href="https://www.vox.com/science-and-health/2020/3/18/21184992/coronavirus-covid-19-flu-comparison-chart" target="_blank">Vox.com</a>
 				</p>
 			</div>
 		</section>
@@ -664,7 +680,7 @@
 						<div class="header_title">05</div>
 					</div>
 					<h4>Do it yourself</h4>
-					<p class="text-small"> It’s time to create your own visualisation. You have learned why we create visualisations, some considerations to make when visualising COVID-19 data and how to use various charts to highlight and communicate different relationships.	
+					<p class="text-small"> It’s time to create your own visualisation. You have learned why we create visualisations, some considerations to make when visualising COVID-19 data and how to use various charts to highlight and communicate different relationships.
 					</p>
 					<p class="text-small">In this final section, we'll walk through how to create a logarithmic line graph. Included in this is a downloadable step-by-step guide.
 					</p>
@@ -675,7 +691,7 @@
                             <div class="header_title">05</div>
                         </div>
 						<h4>Create A Line Graph in Excel</h4>
-						<p class="image-text"> Download our <em><a href="https://drive.google.com/file/d/1z0V_eRDuDy5i0F0_fOUZ1FOVLoOjnXuL/view" target="_blank">Step-By-Step Guide to Creating a Line Graph.</a></em> 
+						<p class="image-text"> Download our <em><a href="https://drive.google.com/file/d/1z0V_eRDuDy5i0F0_fOUZ1FOVLoOjnXuL/view" target="_blank">Step-By-Step Guide to Creating a Line Graph.</a></em>
 						</p>
                         <p class="text-small">
 							<ol start="1">
@@ -688,8 +704,8 @@
 								<li class="text-small"> Customise the design.</li>
 							  </ol> 
 						</p>
-                        <p class="text-bottom"> Press down to walk through the steps together.</p> 
-					</section> 
+                        <p class="text-bottom"> Press down to walk through the steps together.</p>
+					</section>
 					<section id="create_line_1">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
@@ -701,7 +717,7 @@
 						</video>
 						<p class="image-text"><b style="color:#333"> Press down for the next step.</b>
 						</p>
-					</section> 
+					</section>
 					<section id="create_line_2">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
@@ -713,31 +729,31 @@
 						</video>
 						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
-					</section> 
+					</section>
 					<section id="create_line_3">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
-                        <p class="text-small"> <b>Insert a line graph:</b> Next, watch the video below to learn how to insert a line graph as well as how to format the date axis in your chart. 
+                        <p class="text-small"> <b>Insert a line graph:</b> Next, watch the video below to learn how to insert a line graph as well as how to format the date axis in your chart.
 						</p>
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_sc2.mp4" type="video/mp4" />
 						</video>
 						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
-					</section> 
+					</section>
 					<section id="create_line_4">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
                         </div>
-                        <p class="text-small"> <b>Explore using a logarithmic scale:</b> Watch the video below to learn how to format your Y axis using a logarithmic scale. 
+                        <p class="text-small"> <b>Explore using a logarithmic scale:</b> Watch the video below to learn how to format your Y axis using a logarithmic scale.
 						</p>
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_sc3.mp4" type="video/mp4" />
 						</video>
 						<p class="image-text"> <b style="color:#333"> Press down for the next step.</b>
 						</p>
-					</section> 
+					</section>
 					<section id="create_line_5">
                         <div class="header_bar centreblue">
                             <div class="header_title">05</div>
@@ -747,8 +763,8 @@
 						<video controls autoplay>
 							<source data-autoplay src="vid/linegraph_vid4_update_sm.mp4" type="video/mp4" />
 						  </video>
-					</section> 
-				</section> 
+					</section>
+				</section>
 				<section id="quiz" data-menu-title="Test Your Knowledge">
 					<div class="header_bar centregreen">
 						<div class="header_title">06</div>
@@ -773,7 +789,7 @@
 							<li class="text-small sm-mobile"> Vox.com's video on <a href="https://www.youtube.com/watch?v=O-3Mlj3MQ_Q" target= "_blank"> how coronavirus charts can mislead us</a>.</li>
 						  </ol> 
 					</p>
-				</section> 
+				</section>
 				<section id="glossary">
 					<div class="header_bar centregreen">
 						<div class="header_title">Annex</div>
@@ -786,12 +802,12 @@
 							<li class ="text-ex-small"><b>Time Series:</b> A series of data points ordered in time. <a href="https://towardsdatascience.com/almost-everything-you-need-to-know-about-time-series-860241bdc578" target="_blank"> Towards Data Science</a></li>
 							<li class ="text-ex-small"><b>Data Dictionary:</b> A data dictionary is used to catalogue and communicate the structure and content of data, and provides meaningful descriptions for individually named data objects. Data Strategy for the Secretary-General for Action by Everyone, Everywhere & <a href="https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries" target="_blank"> U.S. Geological Survey</a></li>
 							<li class ="text-ex-small"><b>Metadata:</b> Metadata is additional information or documentation about your dataset that will make it easier for others to understand and put your data into context.<a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank"> OCHA Centre for Humanitarian Data</a></li>
-						</ul> 
+						</ul>
 					</p>
-				</section> 
+				</section>
 			</div>
 		</div>
-		
+
 		<script src="js/reveal.js"></script>
 
 		<script>
@@ -814,5 +830,6 @@
 				}
 			});
 		</script>
+		<script src="js/mixpanel-tracking.js"></script>
 	</body>
 </html>
