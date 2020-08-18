@@ -1,0 +1,263 @@
+.print-pdf .pdf-page .header_bar {
+	margin-top: 0 !important;
+}
+
+body,
+.text-small,
+.text-small-centre,
+.reveal p {
+	color: #333;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 21px !important;
+	line-height: 1.65;
+}
+
+.reveal h1, 
+.reveal h2, 
+.reveal h3, 
+.reveal h4, 
+.reveal h5, 
+.reveal h6 {
+	font-family: 'Arvo', serif;
+}
+
+.reveal h1 {
+	font-size: 65px;
+}
+
+.reveal h2 {
+	font-size: 53px;
+}
+
+.reveal h3 {
+	font-size: 42px;
+}
+
+.reveal h4 {
+	font-size: 34px;
+}
+
+.reveal h5 {
+	font-size: 30px;
+}
+
+.reveal h6 {
+	font-size: 19px;
+}
+
+.reveal a {
+	color: #007CE1;
+}
+.reveal a:hover {
+	color: #007CE1;
+}
+
+.white a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.white a:hover {
+	color: #007CE1;
+}
+
+section.has-dark-background,
+section.has-light-background {
+	text-align: center;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.title_container {
+	margin-top: 0 !important;
+}
+
+.header_bar {
+	
+	margin-bottom: 30px !important;
+	width: fit-content;
+}
+
+.header_bar .header_title {
+	padding-right: 20px;
+}
+
+.reveal ol {
+	min-width: 410px;
+}
+
+.reveal video {
+	max-width: 80%;
+}
+
+.reveal section .logos img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin-right: 30px;
+	width: 150px;
+}
+.reveal section .logos_big img {
+	background: none;
+	border: none;
+	box-shadow: none;
+	width: 250px;
+}
+.reveal section .logos img:last-child {
+	margin-right: 0;
+}
+
+.slide-menu-button a,
+.slide-menu-button a:hover {
+	color: #007CE1 ;
+}
+
+.reveal.has-light-background .slide-menu-button a {
+	color: #FFF
+}
+
+.reveal.has-dark-background .slide-menu-button a {
+	color: #FFF
+}
+
+/* Custom CSS for Slide numbers, removed. 
+
+.reveal .slide-number a {
+	color: #007ce1; }
+
+.reveal.has-light-background .slide-number a {
+	color: #FFF; }
+	
+.reveal.has-dark-background .slide-number a {
+	color: #FFF;
+	} */
+
+
+	/* Fonts & Layout for mobile */
+@media screen and (max-width: 600px) {
+	
+	.reveal h1 {
+		font-size: 40px;
+	}
+	.reveal h2 {
+		font-size: 28px;
+	}
+	.reveal h3 {
+		font-size: 20px;
+	}
+	.reveal h4 {
+		font-size: 20px;
+	}
+	.reveal h5 {
+		font-size: 20px;
+	}
+
+	.reveal .text-small {
+		font-size: 14px !important; 
+		text-align: left;
+		line-height: 1.5;
+	}
+	
+	.reveal section .logos img {
+		background: none;
+		border: none;
+		box-shadow: none;
+		width: 100px;
+	}
+	.reveal section .logos_big img {
+		background: none;
+		border: none;
+		box-shadow: none;
+		width: 200px;
+	}
+	/* for slides with lots of text */
+	.reveal .long-para {
+		font-size: 13px ; 
+		text-align: left;
+		line-height: 1.3;
+	}
+	.reveal .text-ex-small{
+		font-size: 11px !important; 
+		text-align: left;
+		line-height: 1.4;
+	}
+	.reveal .text-small-centre {
+		font-size: 13.5px; 
+		text-align: left;
+		line-height: 1.5;
+	}
+	.reveal .text-cover {
+		font-size: 15px !important;  
+		text-align: center !important;
+		line-height: 1 !important;
+	}
+
+	.reveal p.image-text {
+		font-size: .4em !important; 
+	}
+
+	.header_bar {
+		height:80px;
+		margin-top:-70px !important;
+	}
+
+	.reveal .header_title {
+		padding-left: 20px !important;
+		color: #ffffff;
+		line-height: 120px !important;
+		font-size: 1em !important;
+		font-weight: bold !important;
+	}
+
+	.reveal ol, ul {
+		min-width: 80%;
+	}
+
+	.reveal .text-bottom {
+		font-size: .4em !important;
+	}
+
+	.reveal .sm-mobile {
+		font-size: 13px !important;
+	}
+	.reveal .controls .controls-arrow:before,
+	.reveal .controls .controls-arrow:after {
+		width: 2em;
+	}
+	.reveal .controls .navigate-left {
+		right: 4em;
+		bottom: 2em;
+	}
+	.reveal .controls .navigate-right {
+		right: 0;
+		bottom: 2em;
+	}
+	.reveal .controls .navigate-up {
+		right: 2em;
+		bottom: 4em;
+	}
+	.reveal .controls .navigate-down {
+		right: 2em;
+		bottom: -1.4em;
+	}
+	.reveal .header-sm-mobile {
+		font-size: .7em !important;
+	}
+	.reveal .ml-toggle {
+		position: absolute;
+		right: 0;
+		bottom: 550px;
+	}
+
+}
+
+/* multilanguage toggle */
+.ml-toggle {
+	position: absolute;
+	right: 0;
+	bottom: 550px;
+}
+.reveal .text-toggle {
+	font-size: 22px; 
+	line-height: 1.5;
+}

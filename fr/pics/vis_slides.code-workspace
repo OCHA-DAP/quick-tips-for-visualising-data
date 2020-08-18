@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "lib"
+		},
+		{
+			"path": "plugin"
+		},
+		{
+			"path": "pics"
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "js"
+		}
+	]
+}

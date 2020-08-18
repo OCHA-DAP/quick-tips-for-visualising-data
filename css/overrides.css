@@ -188,3 +188,14 @@ section.has-light-background {
 	}
 
 }
+
+/* multilanguage toggle */
+.ml-toggle {
+	position: absolute;
+	right: 0;
+	bottom: 500px;
+}
+.reveal .text-toggle {
+	font-size: 22px; 
+	line-height: 1.5;
+}

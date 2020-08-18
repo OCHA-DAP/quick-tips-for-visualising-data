@@ -1,0 +1,839 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Quick Tips for Visualising Data</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/theme/white_custom.css" id="theme">
+		<link rel="stylesheet" href="css/overrides.css">
+		<link rel="stylesheet" href="css/balloon.min.css">
+
+		<!-- Centre Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Arvo&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<script type="text/javascript">
+		(function (c, a) {
+				if (!a.__SV) {
+					var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
+						function c(b, i) {
+							var a = i.split("."); 2 == a.length && (b = b[a[0]], i = a[1]); b[i] = function () {
+								b.push([i].concat(Array.prototype.slice.call(arguments,
+									0)))
+							}
+						} var e = a; "undefined" !== typeof g ? e = a[g] = [] : g = "mixpanel"; e.people = e.people || []; e.toString = function (b) { var a = "mixpanel"; "mixpanel" !== g && (a += "." + g); b || (a += " (stub)"); return a }; e.people.toString = function () { return e.toString(1) + ".people (stub)" }; l = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+						for (h = 0; h < l.length; h++)c(e, l[h]); var f = "set set_once union unset remove delete".split(" "); e.get_group = function () { function a(c) { b[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); e.push([d, call2]) } } for (var b = {}, d = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < f.length; c++)a(f[c]); return b }; a._i.push([b, d, g])
+					}; a.__SV = 1.2; b = c.createElement("script"); b.type = "text/javascript"; b.async = !0; b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ?
+						MIXPANEL_CUSTOM_LIB_URL : "file:" === c.location.protocol && "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js"; d = c.getElementsByTagName("script")[0]; d.parentNode.insertBefore(b, d)
+				}
+			})(document, window.mixpanel || []);
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="frontcover" data-background="#1bb580">
+					<!-- multilanguage toggler -->
+					<div class="ml-toggle white text-toggle">
+						<a class="active" href="../">EN</a> | 
+						FR
+					</div>
+                    <div class="title_container">
+						<h2 class="white">Conseils pour Visualiser les Données</h2>
+						<h4 class="white">EXEMPLES TIRÉS DU CONTEXTE DE LA PANDÉMIE DE COVID-19 </h4>
+                        <p class="text-small-centre white text-cover">
+                            Created by <a href="https://centre.humdata.org/" target="_blank" >OCHA's Centre for Humanitarian Data</a> / <a href="http://twitter.com/humdata" target="_blank">@humdata</a>
+                        </p>
+						<div class="logos"><img src="pics/logo-ocha-white.png" /><img src="pics/logo-centre-white.png" /></div> 
+						<p class="text-small-centre white text-cover">Appuyez sur la flèche droite de votre clavier ou glissez vers la droite pour naviguer.
+						</p>
+					<p class="text-small-centre white text-cover">Traduction par Affaires mondiales Canada. </p>		
+					<div class="logos_big"><img src="pics/GAC_black_fr.png" /></div>
+					</div>
+				</section>
+				<section id="introduction" data-menu-title="Introduction">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Introduction</div>
+                    </div>
+					<p class="text-small">Les choix que nous faisons lorsque nous visualisons des données influencent la façon dont les gens voient, comprennent et réagissent à ces données.</p>
+					<p class="text-small">Cette séance comprend une série de diapositives qui vous permettront de renforcer vos connaissances, cinq courtes vidéos qui vous montreront comment créer un graphique et un bref questionnaire qui mettra vos connaissances à l’épreuve. La durée prévue pour l’achèvement de tous les segments est de 25 minutes.</p>
+					<p class="text-small">Dans cette séance de familiarisation à la visualisation des données, vous apprendrez, à l’aide d’exemples tirés du contexte de la pandémie de COVID-19:
+						<ol class="text-small">
+							<li>les pratiques exemplaires pour concevoir des visualisations de données judicieuses;</li>
+							<li>comment identifier et représenter visuellement différentes relations entre des données; et </li>
+							<li>comment préparer et structurer vos données afin de réaliser un simple graphique linéaire.</li>
+						</ol>
+					</p>
+				</section>
+				<section id="Table_des_matières" data-menu-title="Table des matières">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Table des matières</div>
+					</div>
+				</br>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/Why_We_Visualise">01 : Pourquoi visualisons-nous des données?</a>
+					</p>
+					<p class="text-small-centre">
+						<a class="contents_link" href="#/undertstand_context">02 : Comprendre les données
+						</a>
+					</p>
+					<p class="text-small-centre">
+                        <a class="contents_link" href="#/chart_choices"> 03 : Conception judicieuse</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/designing_thoughtfully">04 : Choisir la bonne visualisation</a>
+                    </p>
+                    <p class="text-small-centre">
+                        <a class="contents_link" href="#/do_it_yourself">05 : Créer votre propre visualisation</a>
+					</p>
+					<p class="text-small-centre">
+                        <a class="contents_link" href="#/quiz">06 : Mettez vos connaissances à l’épreuve</a>
+					</p>
+					<p class="text-small-centre">
+                        <a class="contents_link" href="#/annex">Annexe</a>
+					</p>
+				</section>
+			<section>
+				<section id="introduction_2" data-menu-title="Introduction">
+                    <div class="header_bar centregreen">
+                        <div class="header_title">Introduction</div>
+					</div>
+					<h5>Comment Naviguer Durant La Séance</h5>
+					<p class="text-small">La barre de progression au bas de votre écran vous indique où vous êtes rendu dans la séance. Si vous souhaitez passer d’une page à l’autre, vous pouvez le faire en utilisant le menu de navigation en bas à gauche de votre écran.
+					</p>
+					<p class="text-small"> Chaque page présente un conseil, un concept ou une pratique exemplaire sur la visualisation de données pendant la pandémie de COVID-19. Faites défiler les pages à l’aide de votre clavier ou en cliquant sur les flèches droite et gauche en bas à droite de votre écran.
+					</p>
+					<p class="text-small"> Sur certaines pages, vous pouvez faire défiler le contenu vers le bas pour en savoir plus sur un sujet particulier. Pour ce faire, utilisez la flèche vers le bas de votre clavier ou cliquez sur la flèche vers le bas qui se trouve à la droite, au bas de votre écran.
+					</p>
+					<p class="text-bottom"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus sur la navigation dans la séance.</p>
+				</section>
+				<section id="introduction_cont">
+                    <div class="header_bar centregreen">
+                        <div class="header_title header-sm-mobile">Introduction</div>
+					</div>
+					<h5>Comment naviguer durant La séance</h5>
+					<p class="text-small"> Les flèches de navigation en bas à droite de votre écran sont là pour vous guider tout au long de la séance. Dans l’exemple ci-dessous, la flèche gauche décolorée indique les pages visualisées, tandis que la flèche du bas et la flèche droite indiquent les pages que vous n’avez pas encore consultées.
+					</p>
+					<div class="img-standard">
+						<img src="pics/nav_arrows.png" alt="nav_arrows" class="no_shadow"/>
+					</div>
+					<p class="text-small"> Maintenant que vous avez compris comment naviguer, cliquez sur la flèche droite pour démarrer la séance.
+					</p>
+				</section>
+			</section>
+			<!-- SECTION 1 WHY -->
+				<section id="pourqoui_visualiser_données" data-background="#007ce0" data-menu-title=" Pourqoui visualiser les données">
+                    <div class="title_container">
+                        <h1 class="white">POURQUOI VISUALISER LES DONNÉES</h1>
+                    </div>
+                </section>
+                <section id="explorer_et_expliquer" data-menu-title="Explorer et Expliquer">
+                    <div class="header_bar centreblue">
+                        <div class="header_title">01</div>
+                    </div>
+                    <h5>NOUS VISUALISONS POUR EXPLORER ET EXPLIQUER</h5>
+                    <p class="text-small"> Nous visualisons les données pour les explorer. Grâce à la visualisation exploratoire des données, nous sommes en mesure de découvrir différentes relations et d’obtenir les informations les plus significatives à mettre en évidence ou à analyser davantage.
+					</p>
+					<p class="text-small"> Nous visualisons également des données pour expliquer ce que nous y percevons. La visualisation explicative peut être utilisée pour informer, persuader et mobiliser un public. C’est le type de visualisation sur lequel nous allons nous concentrer ici.
+					</p>
+					<div class="img-med">
+						<img src="pics/explore_explain.png" alt="explain-v-explore" class="no_shadow"/>
+						<p class="image-text"> Image inspirée par <a href="https://slides.com/maartenzam/boehringer-1#/5/14/0" target="_blank">Maarten Lambrechts</a>
+						</p>
+					</div>
+				</section>
+				<section id="expliquer" data-menu-title="Expliquer à l’aide de la visualisation" >
+					<div class="header_bar centreblue">
+						<div class="header_title">01</div>
+					</div>
+					<h5>COMMENT EXPLIQUER À L’AIDE DE LA VISUALISATION</h5>
+					<p class="text-small">La visualisation de données explicative nécessite un public défini et un objectif clair. Avant de commencer à créer votre visualisation, posez-vous les questions suivantes :
+						<ul class="text-small">
+							<li><b>Quel est mon message?</b> Le message que vous essayez de transmettre doit guider vos choix de conception.</li>
+							<li><b>Qui est le destinataire du message?</b> Penser à l’identité de votre public et à la manière dont il utilisera votre visualisation et interagira avec celle-ci devrait vous aider à cibler votre produit final.</li>
+						</ul>
+					</p>
+				</section>
+		<!-- SECTION 2 Context -->
+			<section id="comprendre_donnees" data-background="#f2645a" data-menu-title="Comprendre les données">
+				<div class="title_container">
+					<h1 class="white">COMPRENDRE LES DONNÉES</h1>
+				</div>
+			</section>
+		<section>
+			<section id="apprenez_à_connaître_vos_données" data-menu-title="Apprenez à connaître vos données">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>AVANT DE COMMENCER, APPRENEZ À CONNAÎTRE VOS DONNÉES</h5>
+				<p class="text-small">Avant de creuser dans un ensemble de données sur la COVID-19, il est important de passer un peu de temps à comprendre ce qui peut et ne peut pas être dit sur les données en question. Trop souvent, nous nous lançons dans l’analyse avant de prendre le temps de comprendre quels aspects du monde nos données représentent.
+				</p>
+				<p class="text-small">La première étape consiste à comprendre les définitions des données qui composent votre ensemble de données. Pour ce faire, vous voudrez examiner les éléments suivants :
+					<ol class="text-small">
+						<li>the <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Les métadonnées sont des informations ou des documents supplémentaires au sujet de votre ensemble de données qui permettent à d’autres personnes de comprendre vos données et de les mettre en contexte." data-balloon-pos="up">les métadonnées; </span> </li>
+						<li>the <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Un dictionnaire de données est utilisé pour cataloguer et communiquer la structure et le contenu des données, et fournit des descriptions utiles d’objets de données nommés individuellement." data-balloon-pos="up">le dictionnaire de données.</span></li>
+					</ol>
+				</p>
+				<p class="text-bottom">Cliquez sur la flèche qui pointe vers le bas pour en savoir plus sur les métadonnées et les dictionnaires de données.</p>
+			</section>
+			<section id="Métadonnées" data-menu-title="Métadonnées">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>EXPLORER LES MÉTADONNÉES</h5>
+				<p class="text-small long-para"> Les métadonnées sont des données relatives à des données. Examiner les métadonnées avant de télécharger un nouvel ensemble de données peut vous faire gagner du temps et vous permettre de savoir si les données que vous allez télécharger contiennent vraiment ce dont vous avez besoin. Le Humanitarian Data Exchange exige que toutes les données partagées sur la plateforme comprennent <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">quelques champs de métadonnées essentiels</a>.
+				</p>
+				<p class="text-small long-para"> Les métadonnées fournissent des informations de base sur un ensemble de données telles que :
+					<ol class="text-small long-para">
+						<li> <b>la source :</b> qui publie l’ensemble de données; </li>
+						<li><b>la date :</b> la date à laquelle l’ensemble de données a été initialement publié, la date à laquelle il a été mis à jour et publié pour la dernière fois et la fréquence de mise à jour prévue, ce qui permet d’anticiper la prochaine date de publication;</li>
+						<li><b>la localisation :</b> l’étendue géographique de l’ensemble de données et sa granularité (par exemple, pour un nombre précis de pays avec des données à un niveau admin1);</li>
+						<li><b>la méthodologie :</b> comment les données ont été recueillies.</li>
+					</ol>
+				</p>
+				<p class="text-bottom"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus sur les dictionnaires de données.</p>
+			</section>
+			<section id="dictionnaire_donnees" data-menu-title="Dictionnaire de données">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>LIRE LE DICTIONNAIRE DE DONNÉES</h5>
+				<p class="text-small"> Certaines organisations publient des dictionnaires de données avec leurs données. Souvent, les en têtes d’un ensemble de données sont condensés pour économiser de l’espace et les rendre lisibles par une machine. Par exemple, un champ avec un en-tête nommé « cas » peut signifier des cas cumulés, des cas quotidiens ou des cas actifs.</p>
+				<p class="text-small"> Un dictionnaire de données fournit des définitions pour les variables d’un ensemble de données afin d’aider à comprendre ce que chaque variable représente. L’exemple ci-dessous donne un exemple de définition donnée pour les patients positifs et soupçonnés ainsi que le type de données (numérique).</p>
+				<div class="img-standard">
+					<img src="pics/data_dictionaryv3.png" alt="data dictionary" />
+					<p class="image-text"> Source: <a href="https://healthdata.gov/dataset/california-covid-19-hospital-data-and-case-statistics" target="_blank">Healthcare.gov Data Portal</a>
+					</p>
+				</div>
+			</section>
+		</section>
+			<section id="points_de_données" data-menu-title="Points de données sur la COVID-19">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>POINTS DE DONNÉES SUR LA COVID-19 SOUVENT UTILISÉS</h5>
+				<p class="text-small sm-mobile">Voici quelques données que l’on retrouve couramment dans les ensembles de données sur la COVID-19 :
+				</p>
+				<p class="text-small sm-mobile">
+					<ol class="text-small sm-mobile">
+						<li><b>nouveaux cas :</b> comprennent le nombre de cas confirmés (et de cas soupçonnés lorsque ces données sont disponibles) pour une période donnée (aussi appelé «<span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Le nombre de cas nouveaux d’une maladie (par exemple, le développement d’une maladie, ou la réaction à un médicament) se produisant pendant une période donnée, généralement une année, sur une population spécifique. L’incidence est par conséquent également une mesure du risque de rencontrer la maladie au cours d'une certaine période." data-balloon-pos="up">incidence</span>»);</li>
+						<li><b>cas cumulés :</b> le total des cas confirmés jusqu’à un moment donné, sans soustraire les personnes qui se sont rétablies ou qui sont décédées. Ces chiffres ne cessent d’augmenter au fil du temps, à mesure que de nouveaux cas sont ajoutés;</li>
+						<li><b>décès :</b> le nombre de décès confirmés (et probables lorsque ces données sont disponibles) pour une période donnée. Le taux de létalité est égal au nombre de décès survenus divisé par le nombre de cas confirmés;.</li>
+						<li><b>cas actifs :</b> comprennent le nombre de cas confirmés (et les cas soupçonnés lorsque ces données sont disponibles) pour une période donnée moins les personnes qui sont décédées ou qui se sont remises de la COVID-19 (aussi appelé « <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="La prévalence est la proportion d’une population dont les résultats ont révélé qu’elle présentait une condition (généralement une maladie ou un facteur de risque tel que le tabagisme). La prévalence peut être mesurée comme un point particulier dans le temps (prévalence instantanée), ou sur une période spécifique telle qu’une année (prévalence au cours d’une période donnée)." data-balloon-pos="up">prévalence</span> »).</li>
+					</ol>
+				</p>
+			</section>
+		<section>
+			<section id="fiabilité_des_données" data-menu-title="Fiabilité des données">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>Fiabilité des données</h5>
+				<p class="text-small sm-mobile"> L’exactitude de ces chiffres dépend habituellement d’un certain nombre de facteurs.
+					<ul class="text-small sm-mobile">
+						<li>Le nombre de cas confirmés dépend de l’ampleur des tests effectués dans un pays, de leur précision et du délai entre le moment où une personne est infectée, présente des symptômes et subit un test.</li>
+						<li>Le nombre de décès varie selon que l’on compte les décès en dehors des hôpitaux et que des tests sont effectués dans les hôpitaux avant ou après le décès. </li>
+						<li>Le nombre de cas actifs est calculé à partir des données sur les cas guéris. Tous les sites ne fournissent pas des données adéquates sur les cas guéris et, par conséquent, ces données peuvent ne pas être fiables. </li>
+					</ul>
+				</p>
+				<p class="text-small">Pour vous assurer que les données dont vous disposez soient aussi actuelles et précises que possible, privilégiez les sources réputées et les données dont les méthodes de collecte sont bien documentées.</p>
+				<p class="text-bottom"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus sur les sources de données fiables. </p>
+			</section>
+			<section id="sources_de_données" data-menu-title="Sources de données">
+				<div class="header_bar centrered">
+					<div class="header_title">02</div>
+				</div>
+				<h5>Données sur la COVID-19 sur HDX</h5>
+				<p class="text-small">HDX héberge une gamme variée d’ensembles de données sur la COVID-19 pour les travailleurs humanitaires. </p>
+				<p class="text-small">Celles-ci comprennent (ressources en anglais) : 
+					<ol class="text-small">
+						<li>Les données sur les cas recensés dans le monde de <a href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases" target="_blank">Johns Hopkins School of Public Health</a> et de <a href="https://data.humdata.org/dataset/coronavirus-covid-19-cases-and-deaths" target="_blank">l’Organisation mondiale de la santé;</a></li>
+						<li>Les données sur les tests de <a href="https://data.humdata.org/dataset/total-covid-19-tests-performed-by-country" target="_blank">Our World in Data;</a></li>
+						<li>Les fermetures d’écoles à l’échelle mondiale de  <a href="https://data.humdata.org/dataset/covid-19-global-travel-restrictions-and-airline-information" target="_blank">UNESCO;</a> et </li>
+						<li>Les restrictions mondiales en matière de voyage et informations sur les compagnies aériennes du<a href="https://data.humdata.org/dataset/global-school-closures-covid19" target="_blank">Programme alimentaire mondial.</a>
+						</li>
+					</ol>
+				</p>
+			</section>
+		</section>
+	<!-- SECTION 4 Charts -->
+			<section id="choisir_donne_visualisation" data-background="#f2645a" data-menu-title="Choisir la bonne visualisation">
+                <div class="title_container">
+                    <h1 class="white">CHOISIR LA BONNE VISUALISATION</h1>
+                </div>
+            </section>
+            <section id="types_de_relations" data-menu-title="Types de relations">
+            	<div class="header_bar centrered">
+                    <div class="header_title">03</div>
+                </div>
+                <h5>TYPES DE RELATIONS</h5>
+				<p class="text-small">Il peut sembler difficile de choisir la bonne visualisation. Il existe beaucoup d’options dont vous pouvez tirer parti. La meilleure façon de réduire le nombre de variables est d’identifier la relation entre les variables que vous voulez mettre en évidence. </p>
+				<p class="text-small"> Dans cette section, nous allons explorer les types de relations et discuter des options de graphiques offertes pour chacune d’elle :
+					<ol class="text-small">
+						<li>Évolution dans le temps</li>
+						<li>Comparaison</li>
+						<li>Distribution</li>
+						<li>Relation partie-tout</li>
+						<li>Géospatial</li>
+					</ol>
+				</p>
+			</section>
+			<section>
+				<section id="évolution_temps" data-menu-title="Évolution dans le temps">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">03</div>
+					</div>
+					<h5>ÉVOLUTION DANS LE TEMPS</h5>
+					<p class="text-small"> Si vous disposez de données chronologiques <span class="popup" class="tooltip-big-text" data-balloon-length="large" aria-label="Une série de points de données classés dans le temps." data-balloon-pos="up">(séries chronologiques)</span>, l’évolution dans le temps est une relation typique à visualiser. Assurez-vous de tracer la ligne chronologique sur l’axe des X. Les graphiques suivants permettent d’illustrer les tendances dans le temps.
+					</p>
+					</p>
+					<div class="img-standard">
+                        <img src="pics/change.png" alt="change_over_time"/>
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel et The Financial Times</a>
+						</br> <b style="color:#333">Cliquez sur la flèche qui pointe vers le bas pour en savoir plus.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphique_linéaire" data-menu-title="Graphique linéaire">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Graphique Linéaire</h5>
+					<p class="text-small"> Un graphique linéaire souligne les tendances en montrant une série de points reliés par des lignes droites. L’ajout de marqueurs visuels pour les événements importants, par exemple lorsque les ordres de rester à la maison sont entrés en vigueur, est un moyen facile d’ajouter du contexte. Les séries chronologiques multiples doivent toujours utiliser des graphiques linéaires.
+					<div class="img-standard">
+                        <img src="pics/covid19_line.png" alt="line graph" />
+                        <p class="image-text">Source: <a href="https://ourworldindata.org/grapher/total-daily-covid-deaths" target="_blank"> Our World in Data </a>
+						</br> <b style="color:#333">Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphiques_à_barres" data-menu-title="Graphiques à barres">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Graphiques à Barres</h5>
+					<p class="text-small">Les graphiques à barres qui représentent des données chronologiques servent à mettre en évidence des valeurs individuelles à des moments distincts. Ils sont plus efficaces lorsque les points de données sont à intervalles égaux comme les jours, les mois ou les années, par exemple le nombre de cas confirmés signalés quotidiennement. Assurez-vous toujours que votre axe des Y commence à zéro. 
+					</p>
+					<div class="img-standard">
+                        <img src="pics/covid19_bar.png" alt="bar chart"/>
+                        <p class="image-text">Source:<a href="https://www.worldometers.info/coronavirus/" target="_blank"> Worldometer </a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphiques_en_aires_empilées" data-menu-title="Graphiques en aires empilées">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Graphiques en Aires Empilées</h5>
+					<p class="text-small"> Les graphiques en aires empilées sont utiles pour comparer plusieurs séries de données évoluant dans le temps. Les valeurs de chaque série sont affichées les unes au-dessus des autres, ce qui permet de visualiser l’évolution de la valeur totale, par exemple le nombre de cas confirmés de COVID-19 dans le monde, et la façon dont les valeurs évoluent dans les groupes de constituants, par exemple la région.
+					</p>
+					<div class="img-standard">
+						<img src="pics/stacked_region.png" alt="area chart" />
+						<p class="image-text">Source:<a href="https://ourworldindata.org/grapher/daily-cases-covid-region" target="_blank"> Our World in Data </a>
+                    </div>
+				</section>
+			</section>
+			<section>
+				<section id="comparaison" data-menu-title="Comparaison">
+               		<div class="header_bar centrered">
+                    	<div class="header_title">03</div>
+					</div>
+					<h5>COMPARAISON </h5>
+					<p class="text-small"> Les visualisations utilisent souvent la taille, la longueur et la position pour aider l’observateur à explorer les différences et les similitudes entre les catégories et les séries de données.
+					</p>
+					<div class="img-standard">
+                        <img src="pics/comparison_v2.png" alt="mag_ranking"/>
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel et The Financial Times</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphique_à_barres_en_ordre" data-menu-title="Graphique à barres en ordre">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Diagrammes à Barres et à Colonnes en Ordre</h5>
+					<p class="text-small"> Les diagrammes à barres et à colonnes en ordre sont excellents pour montrer la position et comparer selon différentes catégories. Lorsque vos étiquettes sont longues, il convient d’utiliser des barres horizontales. Il est toujours préférable de trier vos données, car cela en facilitera la lecture.
+					</p>
+					<div class="img-standard">
+						<iframe title="COVID-19 Pandemic in HRP Locations in Southern &amp;amp; Eastern Africa" aria-label="Bar Chart" id="datawrapper-chart-QdfRZ" src="https://datawrapper.dwcdn.net/QdfRZ/4/" scrolling="no" frameborder="0" style="border: none;" width="710" height="324"></iframe>
+						<p class="image-text"><b style="color:#333">Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="symboles_proportionnels" data-menu-title="Diagramme de symboles proportionnels">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Diagramme de Symboles Proportionnels</h5>
+					<p class="text-small"> Souvent appelés diagrammes à bulles, ces diagrammes sont généralement utilisés pour comparer et montrer les relations entre des cercles catégorisés en utilisant à la fois le positionnement, les couleurs et les proportions.
+					</p>
+					<div class="img-standard">
+						<iframe title="COVID-19 Pandemic in Locations with a Humanitarian Response Plan" aria-label="chart" id="datawrapper-chart-ikRlr" src="https://datawrapper.dwcdn.net/ikRlr/11/" scrolling="no" frameborder="0" style="border: none;" width="600" height="307"></iframe>
+						<p class="image-text">Centre de données humanitaires, UNOCHA</p>
+                    </div>
+				</section>
+			</section>
+			<section>
+				<section id="distribution" data-menu-title="Distribution">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">03</div>
+					</div>
+					<h5>Distribution</h5>
+					<p class="text-small"> Les visualisations de distribution sont souvent utilisées pour explorer les données, car elles montrent les valeurs dans l’ensemble de données et leur fréquence. La forme (ou l’asymétrie) d’une distribution peut être un moyen efficace de mettre en évidence le manque d’uniformité ou d’égalité des données.
+					</p>
+					<div class="img-standard">
+                        <img src="pics/distribution_two_box.png" alt="distribution"/>
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel et The Financial Times</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="histogram" data-menu-title="Histogram">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Histogram</h5>
+					<p class="text-small"> Les histogrammes sont utiles pour comprendre la diffusion des données. Ils montrent où les valeurs sont concentrées, quels sont les extrêmes et s’il y a des écarts. Ils ressemblent aux diagrammes à barres verticales, mais ils comportent une différence majeure : l’axe horizontal (X) contient des données numériques et non catégoriques.
+					</p>
+					<div class="img-sm">
+                        <img src="pics/histogram.png" alt="histogramgraph"/>
+						<p class="image-text">Source: <a href="https://link.springer.com/article/10.1007/s00134-020-05991-x/figures/1" target="_blank">Springer</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples. </b>
+						</p>
+                    </div>
+				</section>
+				<section id="boîtes_à_moustaches" data-menu-title="boîtes à moustaches">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Boîtes à Moustaches</h5>
+					<p class="text-small"> Les boîtes à moustaches (ou diagrammes en boîte) sont populaires parmi les statisticiens et les chercheurs. Ils sont utiles pour résumer des distributions multiples en montrant la médiane (centre) et l’étendue des données. Bien qu’ils soient utiles pour explorer les données, tout le monde ne comprend pas comment interpréter les boîtes à moustaches. À utiliser avec parcimonie comme outil explicatif.
+					</p>
+					<div class="img-sm">
+                        <img src="pics/boxplot_income.png" alt="boxplot"/>
+						<p class="image-text">Source: Centre de données humanitaires, UNOCHA</p>
+                    </div>
+				</section>
+			</section>
+			<section>
+				<section id="partie_d'un_tout" data-menu-title="Partie d'un tout">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">03</div>
+					</div>
+					<h5>PARTIE D'UN TOUT</h5>
+					<p class="text-small"> Ces graphiques sont utiles pour montrer comment différentes sections de données constituent un ensemble. Bien qu’utiles avec un petit nombre de catégories, ils peuvent rapidement devenir difficiles à lire. Si vous souhaitez surtout comparer la taille des sections, un simple diagramme à barres est souvent plus facile à lire.
+					</p>
+					<div class="img-standard">
+                        <img src="pics/part_two.png" alt="part_whole" />
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/VisualVocabulary?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel et The Financial Times</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus. </b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphique_en_anneau" data-menu-title="graphique en anneau">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>GRAPHIQUE EN ANNEAU</h5>
+					<p class="text-small"> Au fil du temps, le graphique en anneau est devenu de plus en plus populaire. Ce graphique est similaire à un diagramme circulaire, mais le centre est un bon endroit où inscrire plus d’informations sur les données (par exemple, le total).
+					</p>
+					<div class="img-standard">
+						<img src="pics/donut_chart.png" alt="donut"/>
+						<p class="image-text">Source: <a href="https://fts.unocha.org/emergencies/911/summary/2020" target="_blank">Services de suivi financier d’OCHA</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="graphique_à_barres_empilées_proportionnelles" data-menu-title="graphique à barres empilées proportionnelles ">
+					<div class="header_bar centrered" >
+						<div class="header_title">03</div>
+					</div>
+					<h5>GRAPHIQUE À BARRES EMPILÉES PROPORTIONNELLES</h5>
+					<p class="text-small">Le graphique à barres empilées proportionnelles est une autre façon simple de montrer la relation partie-d'un-tout. Il est particulièrement utile pour comparer les variables entre les groupes ou à différents points dans le temps.
+					</p>
+					<div class="img-standard">
+						<img src="pics/stacked_home.png" alt="stacked bar graph" />
+                        <p class="image-text">Source: <a href="https://public.tableau.com/profile/eleonora.nazander#!/vizhome/Workingforhome/Dashboard1" target="_blank">Eleonora Nazander</a>
+                    </div>
+				</section>
+			</section>
+			<section>
+				<section id="géospatial" data-menu-title="Géospatial">
+               		 <div class="header_bar centrered">
+                    	<div class="header_title">03</div>
+					</div>
+					<h5>GÉOSPATIAL</h5>
+					<p class="text-small">Utilisez uniquement les cartes lorsque des lieux précis ou l’organisation géographique des données constituent une partie cruciale de votre message. Lorsque les particularités intéressantes de vos données ne sont pas d’ordre géographique, une carte peut finir par reléguer votre message au second plan. Ce n’est pas parce que des données peuvent être cartographiées qu'elles doivent l’être.
+					</p>
+					<div class="img-standard">
+                        <img src="pics/geospatial.png" alt="geopatial"/>
+						<p class="image-text"> Source: <a href="https://public.tableau.com/views/VisualVocabulary/Part-to-Whole?%3Aembed=y&%3Adisplay_count=yes&publish=yes&%3AshowVizHome=no" target="_blank">Andy Kriebel et The Financial Times</a>
+						</br> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour en savoir plus. </b>
+						</p>
+                    </div>
+				</section>
+				<section id="choroplèthe" data-menu-title="Carte choroplèthe">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>CHOROPLÈTHE</h5>
+					<p class="text-small">Cette approche courante de cartographie de données permet de présenter des zones géographiques qui sont colorées, ombragées ou structurées par rapport à une variable. Il est souvent préférable d’utiliser des taux plutôt que des totaux pour ce type de carte.
+					</p>
+					<div class="img-standard">
+                        <img src="pics/map_shaded.png" alt="map" />
+						<p class="image-text">Source: <a href="https://www.humanitarianresponse.info/sites/www.humanitarianresponse.info/files/documents/files/global_humanitarian_response_plan_covid-19.pdf" target="_blank">Plan global de réponse humanitaire à la COVID-19 des Nations Unies</a>
+						</br> <b style="color:#333">Cliquez sur la flèche qui pointe vers le bas pour obtenir d’autres exemples.</b>
+						</p>
+                    </div>
+				</section>
+				<section id="symboles_proportionnels " data-menu-title="Carte de symboles proportionnels ">
+					<div class="header_bar centrered">
+						<div class="header_title">03</div>
+					</div>
+					<h5>Carte de Symboles proportionnels </h5>
+					<p class="text-small"> Cette carte met à l’échelle la taille des symboles proportionnellement à la valeur des données trouvées à cet endroit. En général, plus le symbole est grand, plus la valeur d’un objet à un endroit donné est élevée.
+					</p>
+					<div class="img-standard">
+                        <iframe title="COVID-19 Pandemic in Locations with a Humanitarian Response Plan" aria-label="Map" id="datawrapper-chart-LyNrW" src="https://datawrapper.dwcdn.net/LyNrW/6/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
+                    </div>
+				</section>
+			</section>
+			<section id="approches_pour_la_selection_de_graphiques" data-menu-title="Approche pour La selection de graphiques">
+				<div class="header_bar centrered">
+					<div class="header_title">03</div>
+				</div>
+				<h5>APPROCHES POUR LA SÉLECTION DE GRAPHIQUES</h5>
+				<p class="text-small"> Il existe de nombreux outils pour vous aider à réaliser le graphique le plus approprié pour vos données.
+					<ol class="text-small">
+						<li> Le lexique visuel du <a href="https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary" target="_blank">Financial Times</a> (en anglais)</li>
+						<li>Le site Web<a href="https://datavizcatalogue.com/" target="_blank">Data Visualisation Catalogue</a>(en anglais)</li>
+						<li>L’explorateur de graphiques du site Web <a href="https://www.data-to-viz.com/" target="_blank">Data to Viz </a>(en anglais) </li>
+					</ol>
+				</p>
+				<div class="img-standard">
+					<img src="pics/VisualVocabulary.gif" alt="gif"  />
+				</div>
+			</section>
+		<!-- SECTION 4 Best Practice -->
+		<section id="Conception judicieuse" data-background="#1bb580ff" data-menu-title="Conception judicieuse">
+			<div class="title_container">
+				<h1 class="white">PRÉSENTER LES DONNÉES </br> DE FAÇON JUDICIEUSE</h1>
+			</div>
+		</section>
+		<section id="thoughtful_viz" data-menu-title="Design Considerations">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>FACTEURS À PRENDRE EN CONSIDÉRATION POUR PRÉSENTER LES DONNÉES DE FAÇON JUDICIEUSE</h5>
+			<p class="text-small">La façon dont nous communiquons au sujet de la pandémie de COVID-19 peut influencer la perception du risque et de la sécurité de notre public.
+			</p>
+			<p class="text-small">Nos choix en matière de conception influencent la façon dont le public interprète les données. En effet, par la façon dont nous présentons celles-ci, nous choisissons de mettre l’accent sur certains aspects des données, mais nous pouvons également en cacher d’autres. Même s’il n’existe aucune règle stricte qui dicte la conception de graphiques, voici quelques facteurs à prendre en considération lorsque vous voulez présenter des données liées à la COVID-19.
+			</p>
+		</section>
+		<section id="choix_des_couleurs" data-menu-title="Choix des couleurs">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>Tenir compte de la connotation des couleurs</h5>
+			<p class="text-small">Le rouge est une couleur qui attire l’attention du lecteur et qui est souvent utilisée pour alerter et mettre en évidence. Une carte pleine de cercles rouges qui se chevauchent peut communiquer l’inquiétude et, par conséquent, distraire des autres messages. Tenez compte de la connotation des couleurs lorsque vous créez des visualisations liées à la COVID-19.
+			</p>
+			<div class="img-standard">
+				<img src="pics/who_map.png" alt="colour map"  />
+				<p class="image-text"> Source :<a href="https://covid19.who.int/" target="_blank">Tableau de bord de l’Organisation mondiale de la santé</a> 
+				</p>
+			</div>
+		</section>
+		<section>
+			<section id="utilisation_d’une_échelle_ogarithmique" data-menu-title="Utilisation d’une échelle logarithmique">
+				<div class="header_bar centregreen">
+					<div class="header_title">04</div>
+				</div>
+				<h5>ENVISAGER L’UTILISATION D’UNE ÉCHELLE LOGARITHMIQUE</h5>
+				<p class="text-small">Le fait de tracer une croissance exponentielle sur une échelle linéaire peut masquer des détails importants tels que le taux de croissance. Dans l’exemple ci-dessous, les États-Unis et l’Italie semblent suivre des trajectoires similaires sur l’échelle linéaire, alors qu’il est plus évident sur l’échelle logarithmique que les cas de COVID-19 continuent de croître aux États-Unis tandis que l’Italie connaît un ralentissement.
+				</p>
+				<div class="img-standard">
+					<img src="pics/linear_log.png" alt="log" />
+					<p class="image-text"> Source: <a href="https://www.nytimes.com/2020/03/20/health/coronavirus-data-logarithm-chart.html?auth=login-email&login=email" target="_blank">Kenneth Chang</a>
+					</br> <b style="color:#333">Cliquez sur la flèche qui pointe vers le bas pour en savoir plus.</b>
+					</p>
+				</div>
+			</section>
+			<section id="échelle_linéaire_et_logarithmique" data-menu-title="Échelle linéaire et logarithmique">
+				<div class="header_bar centregreen">
+					<div class="header_title">04</div>
+				</div>
+				<h5>ÉCHELLES LINÉAIRE ET LOGARITHMIQUE</h5>
+				<p class="text-small">La forme la plus courante de graphique linéaire utilise une échelle linéaire. Le long de l’axe des Y, les nombres progressent de façon linéaire : 1, 2, 3, ou 10, 20, 30, etc.
+				</p>
+				<p class="text-small">Sur une échelle logarithmique, les nombres sur l’axe des Y n’augmentent pas par tranches égales. Chaque intervalle augmente selon un facteur déterminé – souvent 10, mais il peut s’agir d’un facteur de 3 ou de 350 ou de 3 500, etc.
+				</p>
+				<p class="text-small">Une échelle logarithmique empêche les grands nombres de fausser tout un graphique et permet de mesurer les taux de changement, en particulier les taux de croissance (par exemple, le nombre de cas ou de décès au fil du temps). Dans le cas de la COVID-19, qui connaît une croissance exponentielle, il sera souvent judicieux d’utiliser une échelle logarithmique, car la ligne de tendance cumulée des cas peut « suivre » les chiffres au lieu de s’écarter du graphique. Pour en savoir plus sur les échelles logarithmiques, consultez <a href="https://theconversation.com/the-bar-necessities-5-ways-to-understand-coronavirus-graphs-135537" target="_blank">The Conversation (en anglais)</a>
+				</p>
+			</section>
+		</section>
+		<section>
+		<section id="valeurs_relatives_et_absolues" data-menu-title="Valeurs relatives et absolues">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>CONNAÎTRE LA DIFFÉRENCE ENTRE LES VALEURS RELATIVES ET ABSOLUES</h5>
+			<p class="text-small long-para"> En gardant à l’esprit le message que vous voulez faire passer, explorez les différentes façons de représenter les données que vous visualisez. Lorsque vous comparez plusieurs pays ou régions, pensez à la mesure dans laquelle votre visualisation sera appelée à changer si vous choisissez de présenter des chiffres absolus (nombre total de cas confirmés) ou des valeurs relatives (nombre de cas confirmés pour X mille personnes).
+			</p>
+			<p class="text-small long-para">Une valeur absolue n’est pour ainsi dire comparée à aucune autre valeur, tandis qu’une valeur relative est créée lorsque deux valeurs absolues sont comparées l’une à l’autre. Les valeurs relatives sont souvent présentées sous forme de pourcentages, de proportions, de taux, etc. et constituent une bonne référence pour permettre aux lecteurs de juger de l’ampleur et de comparer l’ampleur entre différentes catégories.
+			</p>
+			<p class="text-small long-para">Le choix d’utiliser l’une ou l’autre méthode dépend du message que vous essayez de transmettre.
+			</p>
+			<p class="text-bottom"> Cliquez sur la flèche qui pointe vers le bas pour obtenir des exemples.</p>
+		</section>
+		<section id="valeurs_relatives" data-menu-title="Valeurs relatives">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>UTILISATION DE VALEURS RELATIVES CONCERNANT LA COVID-19</h5>
+			<p class="text-small">La carte choroplèthe est un exemple de visualisation qui fonctionne mieux avec des valeurs relatives, car celles-ci fournissent une référence commune pour comparer l’ampleur de la crise dans un ensemble de pays ou de régions.
+			</p>
+			<div class="img-standard">
+				<img src="pics/relative_map.png" alt="log" />
+				<p class="image-text"> Source: <a href="https://ourworldindata.org/grapher/total-confirmed-cases-of-covid-19-per-million-people" target="_blank">Our World in Data</a>
+				</br> <b style="color:#333">Press down to learn more.</b>
+				</p>
+
+			</div>
+		</section>
+		<section id="valuers_absolues" data-menu-title="Valuers Absolues">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>UTILISATION DES VALEURS ABSOLUES CONCERNANT LA COVID-19</h5>
+			<p class="text-small">Les graphiques linéaires logarithmiques sur la COVID-19 utilisent souvent des valeurs absolues. Pourquoi? Lorsqu’on utilise une échelle logarithmique, l’accent est mis sur la variation exponentielle dans le temps ou sur la trajectoire, plutôt que sur l’échelle du problème.
+			</p>
+			<div class="img-standard">
+				<img src="pics/absolute_log_ft.png" alt="log"  />
+				<p class="image-text"> Source: <a href="https://www.ft.com/coronavirus-latest" target="_blank">John Burn-Murdoch et the Financial Times</a>
+				</p>
+			</div>
+		</section>
+		</section>
+	<section>
+		<section id="communiquer_l'intertitude" data-menu-title="Communiquer l'intertitude">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>COMMUNIQUER L’INCERTITUDE</h5>
+			<p class="text-small">Il existe une grande incertitude autour de la COVID-19, et on peut le constater dans les données. Essayez de trouver des moyens de communiquer cette idée d’incertitude dans votre visualisation. Par exemple, en ajoutant simplement la phrase « nous savons qu’il existe X cas », vous aider à faire comprendre que les données dont vous disposez sont incomplètes.
+			</p>
+			<div class="img-standard">
+				<img src="pics/weknowof_map.png" alt="weknowof" />
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a>
+				</br> <b>Press down to learn more</b>
+				</p>
+			</div>
+		</section>
+		<section id="communiquer_Date_Source" data-menu-title="Communiquer date et source">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>COMMUNIQUER La Date et La Source</h5>
+			<p class="text-small"> Compte tenu de la rapidité des changements liés à la pandémie de -19, le fait de fournir aux lecteurs des informations sur la date à laquelle les données se rapportent et la fréquence des mises à jour les aide à comprendre la mesure dans laquelle la visualisation est actuelle. Il est toujours bon d’indiquer clairement la ou les sources des données.
+			</p>
+			<div class="img-standard">
+				<img src="pics/date_source.png" alt="date_source" />
+				<p class="image-text"> Source: <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank">Lisa Charlotte Rost</a>
+				</p>
+			</div>
+		</section>
+		</section>
+		<section id="aller_droit_au_but" data-menu-title="Aller droit au but">
+			<div class="header_bar centregreen">
+				<div class="header_title">04</div>
+			</div>
+			<h5>ALLER DROIT AU BUT</h5>
+			<p class="text-small">Parfois, les graphiques peuvent nuire à la transmission du message que l’on essaie de faire passer. Demandez-vous s’il est préférable de simplement présenter visuellement les chiffres que vous souhaitez mettre en valeur pour mieux transmettre votre message.
+			</p>
+			<div class="img-standard">
+				<img src="pics/get_to_point.png" alt="1Number"  />
+				<p class="image-text"> Source: <a href="https://www.vox.com/science-and-health/2020/3/18/21184992/coronavirus-covid-19-flu-comparison-chart" target="_blank">Vox.com</a>
+				</p>
+			</div>
+		</section>
+			<!-- SECTION 5 Do it Yourself -->
+				<section id="Créer_votre_propre_visualisation" data-background="#007ce0" data-menu-title="Créer Votre Propre Visualisation">
+                    <div class="title_container">
+                        <h1 class="white">CRÉER VOTRE PROPRE VISUALISATION</h1>
+                    </div>
+				</section>
+				<section id="Faiter-Le_Vous-Meme" data-menu-title="Faiter-le vous-meme">
+					<div class="header_bar centreblue">
+						<div class="header_title">05</div>
+					</div>
+					<h5>FAITES-LE VOUS-MÊME</h5>
+					<p class="text-small"> C’est le moment de concevoir votre propre visualisation. Vous avez appris pourquoi nous créons des visualisations, quelques considérations à prendre en compte lors de la visualisation des données sur la COVID-19 et comment utiliser divers graphiques pour mettre en évidence et communiquer différentes relations.
+					</p>
+					<p class="text-small">Dans cette dernière section, nous verrons comment créer un graphique linéaire logarithmique. Un guide étape par étape téléchargeable est inclus.
+					</p>
+				</section>
+                <section>
+                    <section id="Création_Graphique_Linéaire" data-menu-title="Création d'un graphique linéaire dans Excel">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+						<h5>CRÉATION D’UN GRAPHIQUE LINÉAIRE DANS EXCEL</h5>
+						<p class="image-text"> Téléchargez notre <em><a href="https://drive.google.com/file/d/1z0V_eRDuDy5i0F0_fOUZ1FOVLoOjnXuL/view" target="_blank">guide étape par étape pour créer un graphique linéaire logarithmique (en anglais).</a></em>
+						</p>
+                        <p class="text-small">
+							<ol start="1">
+								<li class= "text-small">Télécharger les <a href="https://data.humdata.org/dataset/coronavirus-covid-19-cases-and-deaths" target="_blank"> données de HDX;</a></li>
+								<li class="text-small"> Préparez et structurez vos données;
+								</li>
+								<li class="text-small"> Insérez un graphique linéaire; 
+								</li>
+								<li class="text-small left-align-list" > Explorez en utilisant une échelle logarithmique; et</li>
+								<li class="text-small"> Personnalisez la conception.</li>
+							  </ol> 
+						</p>
+						<p class="text-bottom"> Cliquez sur la flèche qui pointe vers le bas pour parcourir les étapes.</p>
+					</section>
+					<section id="création_graphique_linéaire_1">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+                        <p class="text-small"> <b>Téléchargez les données :</b> Cliquez sur la vidéo ci-dessous pour savoir comment trouver et télécharger des données à partir de HDX.
+						</p>
+						<video controls autoplay>
+							<source data-autoplay src="vid/download_data.mp4" type="video/mp4"/>
+						</video>
+						<p class="image-text"><b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour passer à l’étape suivante.</b>
+						</p>
+					</section>
+					<section id="création_graphique_linéaire_2">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+                        <p class="text-small"> <b>Préparez et structurez vos données :</b> Cliquez sur la vidéo ci-dessous pour apprendre à organiser, à filtrer et à structurer vos données afin de créer un graphique linéaire visualisant la croissance du nombre de cas de COVID-19 en Afghanistan.
+						</p>
+						<video controls autoplay>
+							<source data-autoplay src="vid/linegraph_sc1.mp4" type="video/mp4" />
+						</video>
+						<p class="image-text"> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour passer à l’étape suivante.</b>
+						</p>
+					</section>
+					<section id="création_graphique_linéaire_3">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+                        <p class="text-small"> <b>Insérer un graphique linéaire :</b> Ensuite, regardez la vidéo ci-dessous pour apprendre comment insérer un graphique linéaire ainsi que comment formater l’axe des dates dans votre graphique.chart.
+						</p>
+						<video controls autoplay>
+							<source data-autoplay src="vid/linegraph_sc2.mp4" type="video/mp4" />
+						</video>
+						<p class="image-text"> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour passer à l’étape suivante.</b>
+						</p>
+					</section>
+					<section id="création_graphique_linéaire_4">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+                        <p class="text-small"> <b>Explorer en utilisant une échelle logarithmique :</b> Regardez la vidéo ci-dessous pour apprendre comment formater votre axe des Y à l’aide d’une échelle logarithmique.
+						</p>
+						<video controls autoplay>
+							<source data-autoplay src="vid/linegraph_sc3.mp4" type="video/mp4" />
+						</video>
+						<p class="image-text"> <b style="color:#333"> Cliquez sur la flèche qui pointe vers le bas pour passer à l’étape suivante.</b>
+						</p>
+					</section>
+					<section id="création_graphique_linéaire_5">
+                        <div class="header_bar centreblue">
+                            <div class="header_title">05</div>
+                        </div>
+                        <p class="text-small"> <b>Personnaliser le design :</b> Il est maintenant temps de personnaliser la visualisation! Regardez la vidéo ci- dessous pour apprendre comment ajouter du texte, changer les polices et désencombrer votre graphique.
+						</p>
+						<video controls autoplay>
+							<source data-autoplay src="vid/linegraph_vid4_update_sm.mp4" type="video/mp4" />
+						  </video>
+					</section>
+				</section>
+				<section id="quiz" data-menu-title="Mettez vos connaissances à l’épreuve">
+					<div class="header_bar centregreen">
+						<div class="header_title">06</div>
+					</div>
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6Wrf-HKCcP3UX38E80JvEM1HaRUfppf2ZQYtFWcVQ9h-6Bw/viewform?embedded=true" width="1000" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+				</section>
+				<section id="annexe">
+					<div class="header_bar centregreen">
+						<div class="header_title">Annexe</div>
+					</div>
+					<h5>Autres Ressources</h5>
+					<p class="text-small sm-mobile">
+					</br>
+						<ol start="1">
+							<li class ="text-small sm-mobile">La page sur<a href="https://centre.humdata.org/data-literacy/" target="_blank"> la littératie des données</a> du Centre de données humanitaires, UNOCHA.</li>
+							<li class="text-small sm-mobile"> Les ressources de cette leçon (vidéos, diapositives et guide étape par étape) sont toutes disponibles pour téléchargement et utilisation hors ligne dans <a href="https://drive.google.com/drive/u/1/folders/1Nz1s_ehItFQCeO3lc4huo_2vGFOg1trg" target="_blank"> ce dossier Google Drive</a>.
+							</li>
+							<li class="text-small sm-mobile"><a href="https://www.tableau.com/about/blog/2020/3/ten-considerations-you-create-another-chart-about-covid-19" target="_blank"> 10 considerations before you create another chart about COVID-19</a> d’Amanda Makulec.
+							</li>
+							<li class="text-small sm-mobile"> <a href="https://blog.datawrapper.de/coronaviruscharts/" target="_blank"> 17 (or so) responsible live visualizations about the coronavirus, for you to use</a> de Data Wrapper.
+							</li>
+							<li class="text-small sm-mobile"> Vox.com's video on <a href="https://www.youtube.com/watch?v=O-3Mlj3MQ_Q" target= "_blank"> how coronavirus charts can mislead us</a>.</li>
+						  </ol> 
+					</p>
+				</section>
+				<section id="Glossaire">
+					<div class="header_bar centregreen">
+						<div class="header_title">Annexe</div>
+					</div>
+					<h5>Glossaire</h5>
+					<p class ="text-ex-small">
+						<ul>
+							<li class="text-ex-small"> <b>Incidence :</b> Le nombre de cas nouveaux d’une maladie (par exemple, le développement d’une maladie, ou la réaction à un médicament) se produisant pendant une période donnée, généralement une année, sur une population spécifique. L’incidence est par conséquent également une mesure du risque de rencontrer la maladie au cours d'une certaine période. (Académie européenne des patients)<a href="https://www.eupati.eu/glossary/incidence/" target="_blank"> Académie Européenne des Patients</a></li>
+							<li class ="text-ex-small"> <b>Prévalence :</b> La prévalence est la proportion d’une population dont les résultats ont révélé qu’elle présentait une condition (généralement une maladie ou un facteur de risque tel que le tabagisme). La prévalence peut être mesurée comme un point particulier dans le temps (prévalence instantanée), ou sur une période spécifique telle qu’une année (prévalence au cours d’une période donnée). (Académie européenne des patients) <a href="https://www.eupati.eu/glossary/prevalence/" target="_blank"> Académie Européenne des Patients</a></li>
+							<li class ="text-ex-small"><b>Séries chronologiques :</b> Une série de points de données classés dans le temps. (Towards Data Science)<a href="https://towardsdatascience.com/almost-everything-you-need-to-know-about-time-series-860241bdc578" target="_blank"> Towards Data Science</a></li>
+							<li class ="text-ex-small"><b>Dictionnaire de données :</b> Un dictionnaire de données est utilisé pour cataloguer et communiquer la structure et le contenu des données, et fournit des descriptions utiles d’objets de données nommés individuellement. Stratégie de données du Secretary-General for Action by Everyone, Everywhere et <a href="https://www.usgs.gov/products/data-and-tools/data-management/data-dictionaries" target="_blank"> l’U.S. Geological Survey</a></li>
+							<li class ="text-ex-small"><b>Métadonnées :</b> Les métadonnées sont des informations ou des documents supplémentaires au sujet de votre ensemble de données qui permettent à d’autres personnes de comprendre vos données et de les mettre en contexte. <a href="https://centre.humdata.org/providing-metadata-for-your-datasets-on-hdx/" target="_blank">Centre de données humanitaires, UNOCHA</a></li>
+						</ul>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				center: false,
+				width: "100%",
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/menu/menu.js' }
+				],
+				menu: {
+					hideMissingTitles: true
+				}
+			});
+		</script>
+		<script src="js/mixpanel-tracking.js"></script>
+	</body>
+</html>
