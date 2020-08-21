@@ -418,6 +418,10 @@ body {
     margin-top: 0;
 }
 
+.left-align-list {
+  text-align: left;
+}
+
 
 .text-bottom{
     font-size:0.8em !important;
