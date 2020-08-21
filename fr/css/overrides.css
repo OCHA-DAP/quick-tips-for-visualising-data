@@ -76,6 +76,7 @@ section.has-light-background {
 	
 	margin-bottom: 30px !important;
 	width: fit-content;
+	width: -moz-fit-content;
 }
 
 .header_bar .header_title {
